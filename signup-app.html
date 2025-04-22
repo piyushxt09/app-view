@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="app.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body class="">
+
+    <!-- <---------loader----------------- -->
+    <div class="loader-overlay">
+        <div class="loader"></div>
+    </div>
+    <!-- -----------header start--------------- -->
+    <header class="bg-white shadow-sm">
+        <nav class="navbar container justify-content-between align-items-center">
+            <!-- Logo -->
+            <a class="navbar-brand mx-2" href="#">
+                <img src="images/logo.png" alt="Logo" >
+            </a>
+
+            <!-- Hamburger button to trigger offcanvas -->
+            <button class="btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
+                aria-controls="mobileMenu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-list"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm0-4a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm0-4a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11z" />
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+
+    <!-- Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end text-bg-light" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column ">
+            <a class="navbar-brand mb-4" href="#">
+                <img src="images/logo.png" alt="Logo">
+            </a>
+
+
+            <a class="nav-link mb-3 fs-5 fw-bold" href="home-app.html">Home</a>
+            <a class="nav-link mb-3 fs-5 fw-bold" href="#">Support</a>
+
+            <!-- Currency Dropdown -->
+            <div class="dropdown mb-3">
+                <a class="nav-link dropdown-toggle d-flex align-items-center fs-5 fw-bold Currency" href="#" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="images/india.png" alt="IN">Currency
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">INR - ₹</a></li>
+                    <li><a class="dropdown-item" href="#">USD - $</a></li>
+                    <li><a class="dropdown-item" href="#">EUR - €</a></li>
+                </ul>
+            </div>
+
+            <!-- Login/Signup -->
+            <div class="d-flex gap-2 align-items-center justify-content-around">
+                <a href="login.html" class="btn  my-button  w-50">Login</a>
+                <a href="signup.html" class="btn my-button w-50">Sign Up</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ----------header end---------------- -->
+
+    <!-- ---------signup page--------------- -->
+
+
+    <!-- Bootstrap Modal for Error Message -->
+    <div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header  modal-error text-white">
+                    <h5 class="modal-title"><i class="fa-solid fa-triangle-exclamation"></i> Error</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="errorMessage">Please fill out all required fields.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger modal-error" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Modal for Success Message -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header  modal-success text-white">
+                    <h5 class="modal-title"><i class="fa-solid fa-check-circle"></i> Success</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Login successful! Redirecting...</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success modal-success" data-bs-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="login-container overflow-x-hidden">
+        <div class="form-section">
+            <div class="w-100 Sign-up-Form">
+
+                <div class="d-flex justify-content-between align-items-center  gap-3">
+                    <h2 class="mb-4 w-50">Sign UP</h2>
+                    <div class="mb-3 w-75">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="agentRegister" name="userType">
+                            <label class="form-check-label my-text" for="agentRegister" >Agent
+                                Registration?</label>
+                        </div>
+                    </div>
+                </div>
+
+                <p  class="w-100 text-black m-0">If you already have an account register</p>
+                <p class="">You can<a href="login.html"
+                        class="my-text ms-2"
+                       >Login
+                        here!</a></p>
+                <form id="loginForm">
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email address">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Username</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            <input type="text" class="form-control" id="username" placeholder="Enter your username">
+                        </div>
+                    </div>
+
+                    <div class="mb-3 ">
+                        <label class="form-label"> Create password</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                            <input type="password" class="form-control" id="password" placeholder="Enter your Password">
+
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between mb-3">
+                        <div class="d-flex align-items-center gap-2">
+                            <input type="checkbox" id="rememberMe">
+                            <label for="rememberMe" >Remember me</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn login-btn w-100  ">Register</button>
+                </form>
+                <p class="text-center mt-4">or continue with</p>
+                <div class="social-icons text-center " >
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-google"></i></a>
+                    <!-- <a href="#"><i class="fab fa-apple"></i></a> -->
+                </div>
+            </div>
+            <div class=" Agent-Form w-100">
+                <div class="agent-form-container w-100">
+                    <h2 class="text-start">Agent Registration</h2>
+                    <p  class="text-start text-black m-0">If want to register as a user</p>
+                    <p class="text-start ">You can<a
+                            href="signup.html" class="my-text ms-2">Sign Up!</a></p>
+
+                    <!-- Progress Indicator -->
+                    <div class="progress-container w-75 m-auto" >
+                        <div class="progress-step active" data-step="1">1 <br> <span>Basic Details</span></div>
+                        <div class="progress-line"></div>
+                        <div class="progress-step" data-step="2">2 <br> <span>Business Info</span></div>
+                        <div class="progress-line"></div>
+                        <div class="progress-step" data-step="3">3 <br> <span>Contact Details</span></div>
+                    </div>
+
+                    <form class="agent-form" id="agentForm">
+                        <!-- Step 1 -->
+                        <fieldset class="form-step active">
+                            <legend class="">Personal Details</legend>
+
+                            <label for="agency-name">Agency Name *</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-building"></i></span>
+                                <input type="text" id="agency-name" class="form-control" required>
+                            </div>
+
+                            <label for="country">Country *</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-globe"></i></span>
+                                <select id="country" class="form-control" required>
+                                    <option>Select Country</option>
+                                </select>
+                            </div>
+
+                            <label for="city">City *</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-city"></i></span>
+                                <select id="city" class="form-control" required>
+                                    <option>Select City</option>
+                                </select>
+                            </div>
+
+                            <label for="agency-email">Agency Email *</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                <input type="email" id="agency-email" class="form-control" required>
+                            </div>
+
+                            <label for="first-name">First Name *</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                <input type="text" id="first-name" class="form-control" required>
+                            </div>
+
+                            <label for="last-name">Last Name *</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                <input type="text" id="last-name" class="form-control" required>
+                            </div>
+
+                            <label for="Designation">Designation *</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-id-badge"></i></span>
+                                <input type="text" id="Designation" class="form-control" required>
+                            </div>
+
+                            <div class="form-navigation">
+                                <button type="button" class="next-btn">Next</button>
+                            </div>
+                        </fieldset>
+
+                        <!-- Step 2 -->
+                        <fieldset class="form-step">
+                            <legend>Business Information</legend>
+
+                            <label for="business-nature">Nature of Business *</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-briefcase"></i></span>
+                                <select id="business-nature" class="form-control" required>
+                                    <option>Select</option>
+                                </select>
+                            </div>
+
+                            <label for="business-type">Business Type *</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-building"></i></span>
+                                <select id="business-type" class="form-control" required>
+                                    <option>Select</option>
+                                </select>
+                            </div>
+
+                            <label for="Currency">Preferred Currency *</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-money-bill-wave"></i></span>
+                                <select id="Currency" class="form-control" required>
+                                    <option>Select</option>
+                                </select>
+                            </div>
+
+                            <label for="Address">Address *</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+                                <input type="text" id="Address" class="form-control" required>
+                            </div>
+
+                            <label for="Pincode">Pincode/Zipcode/Postcode *</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-map-pin"></i></span>
+                                <input type="text" id="Pincode" class="form-control" required>
+                            </div>
+
+                            <label for="Telephone">Telephone</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                                <input type="text" id="Telephone" class="form-control" required>
+                            </div>
+
+                            <div class="form-navigation">
+                                <button type="button" class="back-btn">Back</button>
+                                <button type="button" class="next-btn">Next</button>
+                            </div>
+                        </fieldset>
+
+                        <!-- Step 3 -->
+                        <fieldset class="form-step">
+                            <legend>Contact Details</legend>
+
+                            <label for="mobile">Mobile Number *</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-mobile-alt"></i></span>
+                                <input type="text" id="mobile" class="form-control" required>
+                            </div>
+
+                            <label for="Fax">Fax *</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-fax"></i></span>
+                                <input type="text" id="Fax" class="form-control" required>
+                            </div>
+
+                            <label for="Time">Time Zone *</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-clock"></i></span>
+                                <select id="Time" class="form-control" required>
+                                    <option>Select</option>
+                                </select>
+                            </div>
+
+                            <label for="Website">Website *</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-globe"></i></span>
+                                <input type="text" id="Website" class="form-control" required>
+                            </div>
+
+                            <div class="form-navigation">
+                                <button type="button" class="back-btn">Back</button>
+                                <button type="submit" class="submit-btn">Submit</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- <---------signup end------------------- -->
+
+
+
+
+
+    <footer class="app-footer">
+        <div class="container py-4">
+            <div class="footer-logo  mb-4">
+                <img src="images/logo.png" alt="FlyEasyGo" >
+                <p class="mt-2 small">FlyEasyGo is more than just a Hotel booking app; it's your one-stop shop for
+                    seamless travel experiences.</p>
+            </div>
+
+            <!-- Accordion Sections -->
+            <div class="accordion" id="footerAccordion">
+                <!-- Section 1 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="aboutHeading">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#aboutCollapse">
+                            About Us
+                        </button>
+                    </h2>
+                    <div id="aboutCollapse" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-unstyled mb-0">
+                                <li><a href="#">Promo</a></li>
+                                <li><a href="#">Help</a></li>
+                                <li><a href="#">Order</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">FAQ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="resourcesHeading">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#resourcesCollapse ">
+                            Resources
+                        </button>
+                    </h2>
+                    <div id="resourcesCollapse" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-unstyled mb-0">
+                                <li><a href="#">Documentation</a></li>
+                                <li><a href="#">Carrier</a></li>
+                                <li><a href="#">Work With Us</a></li>
+                                <li><a href="#">Blog & News</a></li>
+                                <li><a href="#">Affiliate</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 3 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="legalHeading">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#legalCollapse">
+                            Legal
+                        </button>
+                    </h2>
+                    <div id="legalCollapse" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-unstyled mb-0">
+                                <li><a href="#">Terms and Conditions</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Cookies Policy</a></li>
+                                <li><a href="#">Developers</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 4 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="contactHeading">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#contactCollapse">
+                            Contact Us
+                        </button>
+                    </h2>
+                    <div id="contactCollapse" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-unstyled mb-3">
+                                <li>FlyEasyGo@gmail.com</li>
+                                <li>+91 9455 6778 09</li>
+                                <li>India</li>
+                            </ul>
+                            <div>
+                                <h6>Follow Us On Social</h6>
+                                <div class="d-flex flex-wrap gap-3">
+                                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
+                                            width="24" alt="Facebook"></a>
+                                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png"
+                                            width="24" alt="Twitter"></a>
+                                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+                                            width="24" alt="LinkedIn"></a>
+                                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733590.png"
+                                            width="24" alt="YouTube"></a>
+                                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
+                                            width="24" alt="Instagram"></a>
+                                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046123.png"
+                                            width="24" alt="TikTok"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Text -->
+            <div class="text-center mt-4 small text-muted">
+                © 2024 FlyEasyGo. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Flatpickr -->
+    <link href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let currentStep = 0;
+            const steps = document.querySelectorAll(".form-step");
+            const progressSteps = document.querySelectorAll(".progress-step");
+
+            function updateForm() {
+                steps.forEach((step, index) => {
+                    step.classList.toggle("active", index === currentStep);
+                });
+                progressSteps.forEach((step, index) => {
+                    step.classList.toggle("active", index <= currentStep);
+                });
+            }
+
+            document.querySelectorAll(".next-btn").forEach(button => {
+                button.addEventListener("click", () => {
+                    if (currentStep < steps.length - 1) {
+                        currentStep++;
+                        updateForm();
+                    }
+                });
+            });
+
+            document.querySelectorAll(".back-btn").forEach(button => {
+                button.addEventListener("click", () => {
+                    if (currentStep > 0) {
+                        currentStep--;
+                        updateForm();
+                    }
+                });
+            });
+
+            updateForm();
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const agentCheckbox = document.getElementById("agentRegister");
+            const signUpForm = document.querySelector(".Sign-up-Form");
+            const agentForm = document.querySelector(".Agent-Form");
+
+            function toggleForms() {
+                if (agentCheckbox.checked) {
+                    signUpForm.style.display = "none";
+                    agentForm.style.display = "block";
+                } else {
+                    signUpForm.style.display = "block";
+                    agentForm.style.display = "none";
+                }
+            }
+
+            // Run on checkbox change
+            agentCheckbox.addEventListener("change", toggleForms);
+
+            // Initialize state on page load
+            toggleForms();
+        });
+
+    </script>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent form submission
+
+            var email = document.getElementById("email").value.trim();
+            var username = document.getElementById("username").value.trim();
+            var password = document.getElementById("password").value.trim();
+
+            if (email === "" || password === "" || username === "") {
+                document.getElementById("errorMessage").innerHTML = "All fields are required!";
+                var errorModal = new bootstrap.Modal(document.getElementById("errorModal"));
+                errorModal.show();
+            } else {
+                var successModal = new bootstrap.Modal(document.getElementById("successModal"));
+                successModal.show();
+
+                setTimeout(function () {
+                    window.location.href = "home.html";
+                }, 2000);
+            }
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("agentForm").addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent form submission
+
+                let formFields = document.querySelectorAll(".agent-form fieldset input, .agent-form fieldset textarea, .agent-form fieldset select");
+                let isValid = true;
+
+                formFields.forEach(function (field) {
+                    if (field.value.trim() === "") {
+                        isValid = false;
+                    }
+                });
+
+                if (!isValid) {
+                    var errorModal = new bootstrap.Modal(document.getElementById("errorModal"));
+                    errorModal.show();
+                } else {
+                    var successModal = new bootstrap.Modal(document.getElementById("successModal"));
+                    successModal.show();
+
+                    setTimeout(function () {
+                        window.location.href = "home.html";
+                    }, 2000);
+                }
+            });
+        });
+
+    </script>
+
+
+</body>
+
+</html>

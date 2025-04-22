@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Details</title>
+    <title>Search </title>
     <link rel="stylesheet" href="app.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -50,7 +50,7 @@
         </div>
         <div class="offcanvas-body d-flex flex-column ">
             <a class="navbar-brand mb-4" href="#">
-                <img src="images/logo.png" alt="Logo">
+                <img src="images/logo.png" alt="Logo" >
             </a>
 
 
@@ -61,7 +61,7 @@
             <div class="dropdown mb-3">
                 <a class="nav-link dropdown-toggle d-flex align-items-center fs-5 fw-bold Currency" href="#" role="button"
                     data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="images/india.png" alt="IN">Currency
+                    <img src="images/india.png" alt="IN" >Currency
                 </a>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">INR - ₹</a></li>
@@ -82,535 +82,364 @@
 
     <!-- ----------header end---------------- -->
 
-    <!-- ---------Hotel details page--------------- -->
+    <!-- ---------search page--------------- -->
+    <div class="d-flex justify-content-around">
 
-    <div class="hotel-details container my-3">
-        <h3 class="fs-5 mt-4">Home / <span class="my-text">Hotel Details</span></h3>
-        <h3 class="my-text fw-bold text-center mt-4 fs-1">Hotel Lodhi Garden</h3>
-        <p class="text-muted text-center mt-0 pt-0">Lodhi Road, New Delhi</p>
-
-        <div class="slider-container mt-4">
-            <div class="slider">
-                <img src="images/Goa.png" class="active" alt="Hotel View">
-                <img src="images/hotel-image.webp" alt="Room Interior">
-                <img src="images/Goa.png" alt="Hotel View">
-                <img src="images/Hp.png" alt="Lobby">
-                <img src="images/hotel-image.webp" alt="Room Interior">
-                <img src="images/Hp.png" alt="Lobby">
-            </div>
-            <div class="thumbnails d-flex">
-                <img src="images/Goa.png" class="thumbnail" onclick="changeImage(0)" alt="Thumb 1">
-                <img src="images/hotel-image.webp" class="thumbnail" onclick="changeImage(1)" alt="Thumb 2">
-                <img src="images/Goa.png" class="thumbnail" onclick="changeImage(2)" alt="Thumb 3">
-                <img src="images/Hp.png" class="thumbnail" onclick="changeImage(3)" alt="Thumb 3">
-                <img src="images/hotel-image.webp" class="thumbnail" onclick="changeImage(4)" alt="Thumb 3">
-                <img src="images/Hp.png" class="thumbnail" onclick="changeImage(5)" alt="Thumb 3">
-            </div>
+        <div class=" my-3 mx-3">
+            <button class="btn modal-success text-white fw-bold px-3 fs-6" data-bs-toggle="modal"
+                data-bs-target="#modifySearchModal">
+                Modify Search
+            </button>
         </div>
-
-        <div class="highlights d-flex mt-3 gap-3">
-            <div class="highlight-item"><i class="fas fa-bath fs-3"></i></div>
-            <div class="highlight-item"><i class="fas fa-door-closed fs-3"></i></div>
-            <div class="highlight-item"><i class="fas fa-lightbulb fs-3"></i></div>
-            <div class="highlight-item"><i class="fas fa-tv fs-3"></i></div>
-            <div class="highlight-item"><i class="fas fa-parking fs-3"></i></div>
-            <div class="highlight-item"><i class="fas fa-wifi fs-3"></i></div>
-            <div class="highlight-item"><i class="fas fa-swimming-pool fs-3"></i></div>
-        </div>
-
-        <h3 class="fs-1 mt-4">About</h3>
-
-        <p class="text-justify">Lodhi Garden Hotel, nestled near Delhi’s picturesque Lodhi Gardens, offers a blend of
-            luxury and tranquility.
-            The hotel features elegantly designed rooms, world-class amenities, and personalized services, ensuring a
-            comfortable stay. Guests can enjoy fine dining, a rejuvenating spa, and scenic garden views. Its strategic
-            location provides easy access to Delhi’s historical landmarks and cultural attractions.
-        </p>
-
-        <div class="booking-card">
-            <div class="review-section">
-                <h3>Start Booking</h3>
-                <span>Reviews <span class="review-badge">4.5</span></span>
-            </div>
-            <p class="price">$200 <span>per Day</span></p>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-            </div>
-            <button class="book-btn">Book Now!</button>
-        </div>
-
-        <div class="hotels my-4">
-            <div class="d-flex flex-row-reverse align-items-center mb-2 mt-5 justify-content-between">
-
-                <button class="btn modal-success text-white fw-bold px-4 w-50 " data-bs-toggle="modal"
-                    data-bs-target="#modifySearchModal">
-                    Modify Search
-                </button>
-
-                <h4 class="fw-bold mt-2">Room Types</h4>
-            </div>
-
-            <div class="card p-3 shadow-sm mb-3">
-                <h5 class="fw-semibold">Delux One Room-1</h5>
-                <div class="row mt-3">
-                    <!-- Inclusions -->
-                    <div class="col-6">
-                        <h6 class="fw-semibold">Inclusions</h6>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success me-2"></i>Mineral Water</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Breakfast</li>
-                        </ul>
-                    </div>
-                    <!-- Highlights -->
-                    <div class="col-6 px-4">
-                        <h6 class="fw-semibold">Highlights</h6>
-                        <p><i class="fas fa-wifi me-2"></i><i class="fas fa-tv me-2"></i>1 Bedroom</p>
-                    </div>
-                </div>
-
-                <div class="row align-items-center mt-3 ">
-                    <!-- Max Guests -->
-                    <div class="col-6 px-4">
-                        <h6 class="fw-semibold">Max Guests</h6>
-                        <p><i class="fas fa-people-group  text-warning"></i>2 Adults 2 Children</p>
-                    </div>
-                    <!-- Price and Book -->
-                    <div class="col-6    px-4">
-                        <h5 class="text-dark fw-bold">$18,500</h5>
-                        <small class="text-muted">For 3 Nights</small><br>
-                        <button class="btn my-button mt-1" id="bookNowBtn">Book Now</button>
-                    </div>
-                </div>
-
-                <hr>
-                <div class="d-flex justify-content-between px-2">
-                    <a href="#" class="my-text fw-semibold text-decoration-none" data-bs-target="#roomDetailsModal"
-                        data-bs-toggle="modal">View Room Details</a>
-                    <a href="#" class="text fw-semibold text-decoration-none" data-bs-target="#termsModal"
-                        data-bs-toggle="modal">Tc Policy</a>
-                </div>
-            </div>
-
-            <div class="card p-3 shadow-sm mb-3">
-                <h5 class="fw-semibold">Delux One Room-1</h5>
-                <div class="row mt-3">
-                    <!-- Inclusions -->
-                    <div class="col-6">
-                        <h6 class="fw-semibold">Inclusions</h6>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success me-2"></i>Mineral Water</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Breakfast</li>
-                        </ul>
-                    </div>
-                    <!-- Highlights -->
-                    <div class="col-6 px-4">
-                        <h6 class="fw-semibold">Highlights</h6>
-                        <p><i class="fas fa-wifi me-2"></i><i class="fas fa-tv me-2"></i>1 Bedroom</p>
-                    </div>
-                </div>
-
-                <div class="row align-items-center mt-3 ">
-                    <!-- Max Guests -->
-                    <div class="col-6 px-4">
-                        <h6 class="fw-semibold">Max Guests</h6>
-                        <p><i class="fas fa-people-group  text-warning"></i>2 Adults 2 Children</p>
-                    </div>
-                    <!-- Price and Book -->
-                    <div class="col-6    px-4">
-                        <h5 class="text-dark fw-bold">$18,500</h5>
-                        <small class="text-muted">For 3 Nights</small><br>
-                        <button class="btn my-button mt-1">Book Now</button>
-                    </div>
-                </div>
-
-                <hr>
-                <div class="d-flex justify-content-between px-2">
-                    <a href="#" class="my-text fw-semibold text-decoration-none">View Room Details</a>
-                    <a href="#" class="text fw-semibold text-decoration-none">Tc Policy</a>
-                </div>
-            </div>
-
-            <div class="card p-3 shadow-sm mb-3">
-                <h5 class="fw-semibold">Delux One Room-1</h5>
-                <div class="row mt-3">
-                    <!-- Inclusions -->
-                    <div class="col-6">
-                        <h6 class="fw-semibold">Inclusions</h6>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success me-2"></i>Mineral Water</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Breakfast</li>
-                        </ul>
-                    </div>
-                    <!-- Highlights -->
-                    <div class="col-6 px-4">
-                        <h6 class="fw-semibold">Highlights</h6>
-                        <p><i class="fas fa-wifi me-2"></i><i class="fas fa-tv me-2"></i>1 Bedroom</p>
-                    </div>
-                </div>
-
-                <div class="row align-items-center mt-3 ">
-                    <!-- Max Guests -->
-                    <div class="col-6 px-4">
-                        <h6 class="fw-semibold">Max Guests</h6>
-                        <p><i class="fas fa-people-group  text-warning"></i>2 Adults 2 Children</p>
-                    </div>
-                    <!-- Price and Book -->
-                    <div class="col-6    px-4">
-                        <h5 class="text-dark fw-bold">$18,500</h5>
-                        <small class="text-muted">For 3 Nights</small><br>
-                        <button class="btn my-button mt-1">Book Now</button>
-                    </div>
-                </div>
-
-                <hr>
-                <div class="d-flex justify-content-between px-2">
-                    <a href="#" class="my-text fw-semibold text-decoration-none">View Room Details</a>
-                    <a href="#" class="text fw-semibold text-decoration-none">Tc Policy</a>
-                </div>
-            </div>
-
-            <div class="card p-3 shadow-sm mb-3">
-                <h5 class="fw-semibold">Delux One Room-1</h5>
-                <div class="row mt-3">
-                    <!-- Inclusions -->
-                    <div class="col-6">
-                        <h6 class="fw-semibold">Inclusions</h6>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success me-2"></i>Mineral Water</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Breakfast</li>
-                        </ul>
-                    </div>
-                    <!-- Highlights -->
-                    <div class="col-6 px-4">
-                        <h6 class="fw-semibold">Highlights</h6>
-                        <p><i class="fas fa-wifi me-2"></i><i class="fas fa-tv me-2"></i>1 Bedroom</p>
-                    </div>
-                </div>
-
-                <div class="row align-items-center mt-3 ">
-                    <!-- Max Guests -->
-                    <div class="col-6 px-4">
-                        <h6 class="fw-semibold">Max Guests</h6>
-                        <p><i class="fas fa-people-group  text-warning"></i>2 Adults 2 Children</p>
-                    </div>
-                    <!-- Price and Book -->
-                    <div class="col-6    px-4">
-                        <h5 class="text-dark fw-bold">$18,500</h5>
-                        <small class="text-muted">For 3 Nights</small><br>
-                        <button class="btn my-button mt-1">Book Now</button>
-                    </div>
-                </div>
-
-                <hr>
-                <div class="d-flex justify-content-between px-2">
-                    <a href="#" class="my-text fw-semibold text-decoration-none">View Room Details</a>
-                    <a href="#" class="text fw-semibold text-decoration-none">Tc Policy</a>
-                </div>
-            </div>
-
-            <div class="card p-3 shadow-sm mb-3">
-                <h5 class="fw-semibold">Delux One Room-1</h5>
-                <div class="row mt-3">
-                    <!-- Inclusions -->
-                    <div class="col-6">
-                        <h6 class="fw-semibold">Inclusions</h6>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success me-2"></i>Mineral Water</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Breakfast</li>
-                        </ul>
-                    </div>
-                    <!-- Highlights -->
-                    <div class="col-6 px-4">
-                        <h6 class="fw-semibold">Highlights</h6>
-                        <p><i class="fas fa-wifi me-2"></i><i class="fas fa-tv me-2"></i>1 Bedroom</p>
-                    </div>
-                </div>
-
-                <div class="row align-items-center mt-3 ">
-                    <!-- Max Guests -->
-                    <div class="col-6 px-4">
-                        <h6 class="fw-semibold">Max Guests</h6>
-                        <p><i class="fas fa-people-group  text-warning"></i>2 Adults 2 Children</p>
-                    </div>
-                    <!-- Price and Book -->
-                    <div class="col-6    px-4">
-                        <h5 class="text-dark fw-bold">$18,500</h5>
-                        <small class="text-muted">For 3 Nights</small><br>
-                        <button class="btn my-button mt-1">Book Now</button>
-                    </div>
-                </div>
-
-                <hr>
-                <div class="d-flex justify-content-between px-2">
-                    <a href="#" class="my-text fw-semibold text-decoration-none">View Room Details</a>
-                    <a href="#" class="text fw-semibold text-decoration-none">Tc Policy</a>
-                </div>
-            </div>
+        <div class=" my-3 mx-3">
+            <button class="btn modal-success text-white fw-bold px-3 fs-6" data-bs-toggle="modal"
+                data-bs-target="#filterModal">
+                Show Filters
+            </button>
         </div>
     </div>
 
-    <div class="container mapview my-3">
-        <h2>MAP VIEW</h2>
-        <iframe class="rounded"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d203021.35298061313!2d77.04417211070437!3d28.527554409214392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x52c2b7494e204dce!2sNew%20Delhi%2C%20Delhi!5e1!3m2!1sen!2sin!4v1738217559538!5m2!1sen!2sin"
-            width="100%" height="600px" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="container my-3">
+        <div class="heading text-center">
+            <h2>Delhi</h2>
+            <p>Friday, 23 OCT-SUN, 25 OCT (3 NIGHTS) | 2 ADULTS 2 CHILDREN</p>
+        </div>
+        <div class="hotel-card my-3">
+            <div class="hotel-img">
+                <img src="images/hotel-fun.webp" alt="Hotel Image">
+            </div>
+            <div class="hotel-info">
+                <h4 class="hotel-title">
+                    The Lodhi – A member of the Leading Hotels...
+                </h4>
+                <div class="hotel-meta">
+                    <span class="location">Lodhi Road, New Delhi</span>
+                    <span class="reviews">Reviews <span class="review-badge">4.5</span></span>
+                </div>
+
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+
+                <div class="features">
+                    <div><i class="fa fa-wifi"></i> Free Wifi</div>
+                    <div><i class="fa fa-swimmer"></i> Swimming Pool</div>
+                    <div><i class="fa fa-coffee"></i> Breakfast</div>
+                    <div><i class="fa fa-car"></i> Free On-site Parking</div>
+                </div>
+
+                <div class="bottom-section">
+                    <div class="price">
+                        $18,500 <span>For 7 Nights</span>
+                    </div>
+                    <button class="check-btn">Check Availability</button>
+                </div>
+
+                <div class="links">
+                    <a href="#">View Hotel Details</a>
+                    <a href="#" class="tc">TC Policy</a>
+                </div>
+            </div>
+        </div>
+        <div class="hotel-card my-3">
+            <div class="hotel-img">
+                <img src="images/hotel-fun.webp" alt="Hotel Image">
+            </div>
+            <div class="hotel-info">
+                <h4 class="hotel-title">
+                    The Lodhi – A member of the Leading Hotels...
+                </h4>
+                <div class="hotel-meta">
+                    <span class="location">Lodhi Road, New Delhi</span>
+                    <span class="reviews">Reviews <span class="review-badge">4.5</span></span>
+                </div>
+
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+
+                <div class="features">
+                    <div><i class="fa fa-wifi"></i> Free Wifi</div>
+                    <div><i class="fa fa-swimmer"></i> Swimming Pool</div>
+                    <div><i class="fa fa-coffee"></i> Breakfast</div>
+                    <div><i class="fa fa-car"></i> Free On-site Parking</div>
+                </div>
+
+                <div class="bottom-section">
+                    <div class="price">
+                        $18,500 <span>For 7 Nights</span>
+                    </div>
+                    <button class="check-btn">Check Availability</button>
+                </div>
+
+                <div class="links">
+                    <a href="#">View Hotel Details</a>
+                    <a href="#" class="tc">TC Policy</a>
+                </div>
+            </div>
+        </div>
+        <div class="hotel-card my-3">
+            <div class="hotel-img">
+                <img src="images/hotel-fun.webp" alt="Hotel Image">
+            </div>
+            <div class="hotel-info">
+                <h4 class="hotel-title">
+                    The Lodhi – A member of the Leading Hotels...
+                </h4>
+                <div class="hotel-meta">
+                    <span class="location">Lodhi Road, New Delhi</span>
+                    <span class="reviews">Reviews <span class="review-badge">4.5</span></span>
+                </div>
+
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+
+                <div class="features">
+                    <div><i class="fa fa-wifi"></i> Free Wifi</div>
+                    <div><i class="fa fa-swimmer"></i> Swimming Pool</div>
+                    <div><i class="fa fa-coffee"></i> Breakfast</div>
+                    <div><i class="fa fa-car"></i> Free On-site Parking</div>
+                </div>
+
+                <div class="bottom-section">
+                    <div class="price">
+                        $18,500 <span>For 7 Nights</span>
+                    </div>
+                    <button class="check-btn">Check Availability</button>
+                </div>
+
+                <div class="links">
+                    <a href="#">View Hotel Details</a>
+                    <a href="#" class="tc">TC Policy</a>
+                </div>
+            </div>
+        </div>
+        <div class="hotel-card my-3">
+            <div class="hotel-img">
+                <img src="images/hotel-fun.webp" alt="Hotel Image">
+            </div>
+            <div class="hotel-info">
+                <h4 class="hotel-title">
+                    The Lodhi – A member of the Leading Hotels...
+                </h4>
+                <div class="hotel-meta">
+                    <span class="location">Lodhi Road, New Delhi</span>
+                    <span class="reviews">Reviews <span class="review-badge">4.5</span></span>
+                </div>
+
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+
+                <div class="features">
+                    <div><i class="fa fa-wifi"></i> Free Wifi</div>
+                    <div><i class="fa fa-swimmer"></i> Swimming Pool</div>
+                    <div><i class="fa fa-coffee"></i> Breakfast</div>
+                    <div><i class="fa fa-car"></i> Free On-site Parking</div>
+                </div>
+
+                <div class="bottom-section">
+                    <div class="price">
+                        $18,500 <span>For 7 Nights</span>
+                    </div>
+                    <button class="check-btn">Check Availability</button>
+                </div>
+
+                <div class="links">
+                    <a href="#">View Hotel Details</a>
+                    <a href="#" class="tc">TC Policy</a>
+                </div>
+            </div>
+        </div>
+        <div class="hotel-card my-3">
+            <div class="hotel-img">
+                <img src="images/hotel-fun.webp" alt="Hotel Image">
+            </div>
+            <div class="hotel-info">
+                <h4 class="hotel-title">
+                    The Lodhi – A member of the Leading Hotels...
+                </h4>
+                <div class="hotel-meta">
+                    <span class="location">Lodhi Road, New Delhi</span>
+                    <span class="reviews">Reviews <span class="review-badge">4.5</span></span>
+                </div>
+
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+
+                <div class="features">
+                    <div><i class="fa fa-wifi"></i> Free Wifi</div>
+                    <div><i class="fa fa-swimmer"></i> Swimming Pool</div>
+                    <div><i class="fa fa-coffee"></i> Breakfast</div>
+                    <div><i class="fa fa-car"></i> Free On-site Parking</div>
+                </div>
+
+                <div class="bottom-section">
+                    <div class="price">
+                        $18,500 <span>For 7 Nights</span>
+                    </div>
+                    <button class="check-btn">Check Availability</button>
+                </div>
+
+                <div class="links">
+                    <a href="#">View Hotel Details</a>
+                    <a href="#" class="tc">TC Policy</a>
+                </div>
+            </div>
+        </div>
+        <div class="hotel-card my-3">
+            <div class="hotel-img">
+                <img src="images/hotel-fun.webp" alt="Hotel Image">
+            </div>
+            <div class="hotel-info">
+                <h4 class="hotel-title">
+                    The Lodhi – A member of the Leading Hotels...
+                </h4>
+                <div class="hotel-meta">
+                    <span class="location">Lodhi Road, New Delhi</span>
+                    <span class="reviews">Reviews <span class="review-badge">4.5</span></span>
+                </div>
+
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+
+                <div class="features">
+                    <div><i class="fa fa-wifi"></i> Free Wifi</div>
+                    <div><i class="fa fa-swimmer"></i> Swimming Pool</div>
+                    <div><i class="fa fa-coffee"></i> Breakfast</div>
+                    <div><i class="fa fa-car"></i> Free On-site Parking</div>
+                </div>
+
+                <div class="bottom-section">
+                    <div class="price">
+                        $18,500 <span>For 7 Nights</span>
+                    </div>
+                    <button class="check-btn">Check Availability</button>
+                </div>
+
+                <div class="links">
+                    <a href="#">View Hotel Details</a>
+                    <a href="#" class="tc">TC Policy</a>
+                </div>
+            </div>
+        </div>
+        <div class="hotel-card my-3">
+            <div class="hotel-img">
+                <img src="images/hotel-fun.webp" alt="Hotel Image">
+            </div>
+            <div class="hotel-info">
+                <h4 class="hotel-title">
+                    The Lodhi – A member of the Leading Hotels...
+                </h4>
+                <div class="hotel-meta">
+                    <span class="location">Lodhi Road, New Delhi</span>
+                    <span class="reviews">Reviews <span class="review-badge">4.5</span></span>
+                </div>
+
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+
+                <div class="features">
+                    <div><i class="fa fa-wifi"></i> Free Wifi</div>
+                    <div><i class="fa fa-swimmer"></i> Swimming Pool</div>
+                    <div><i class="fa fa-coffee"></i> Breakfast</div>
+                    <div><i class="fa fa-car"></i> Free On-site Parking</div>
+                </div>
+
+                <div class="bottom-section">
+                    <div class="price">
+                        $18,500 <span>For 7 Nights</span>
+                    </div>
+                    <button class="check-btn">Check Availability</button>
+                </div>
+
+                <div class="links">
+                    <a href="#">View Hotel Details</a>
+                    <a href="#" class="tc">TC Policy</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="deal-card">
+            <div class="deal-photo">
+                <img src="images/shopflight.png" alt="Sale Image">
+            </div>
+            <div class="deal-content">
+                <div class="deal-title">We've found you a great deal!</div>
+                <div class="deal-text">
+                    Get more, spend less with up to $575 off when you book your flight + stay together.
+                </div>
+                <a href="#" class="deal-button">Shop flight</a>
+            </div>
+        </div>
+
+
+        <div class="deal-card">
+            <div class="deal-title">Tap
+                into the world of travel</div>
+            <div class="deal-photo">
+                <img src="images/qrcode.png" alt="Sale Image">
+            </div>
+            <div class="deal-content">
+
+                <div class="deal-text">
+                    Scan the QR code with your device camera and download our app
+                </div>
+
+            </div>
+        </div>
+
+        <div class="deal-card">
+            <div class="deal-photo">
+                <img src="images/bag.png" alt="Sale Image">
+            </div>
+            <div class="deal-content">
+                <div class="deal-title">Log-in and get exclusive discounts!</div>
+                <div class="deal-text">
+                    Log in and Unlock all the exclusive offers and use wallet etc.
+                </div>
+                <a href="#" class="deal-button">Login/Create Account</a>
+            </div>
+        </div>
     </div>
-
-
-    <h3 class="container reviews-heading  mt-4 fs-1">User Rating & Reviews</h3>
-    <div class="container mt-4 reviews-section-hotel">
-        <ul class="nav nav-tabs text-center">
-            <li class="nav-item"><a class="nav-link active" href="#">Everyone</a></li>
-            <li class="nav-item"><a class="nav-link my-text" href="#">Couple</a></li>
-            <li class="nav-item active"><a class="nav-link my-text " href="#">Everyone</a></li>
-            <li class="nav-item"><a class="nav-link my-text" href="#">Group</a></li>
-            <li class="nav-item"><a class="nav-link my-text" href="#">Solo</a></li>
-            <li class="nav-item"><a class="nav-link my-text" href="#">Business</a></li>
-        </ul>
-        <div class="d-flex align-items-center mt-3">
-            <div class="rating-box my-button p-2 rounded">3.7</div>
-            <div class="ms-3">
-                <h4>Very Good</h4>
-                <p>113 Ratings, 85 Reviews</p>
-            </div>
-        </div>
-        <div>
-            <p>Traveller Impressions</p>
-            <p>Guest reviews highlight that the property is conveniently located near Mapusa market...</p>
-        </div>
-        <div>
-            <h5>Filter By:</h5>
-            <div class="review-filters">
-                <button class="btn my-button active mb-2">All Reviews</button>
-                <button class="btn btn-outline-primary mb-2">Good Food</button>
-                <button class="btn btn-outline-primary mb-2">Good Service</button>
-                <button class="btn btn-outline-primary mb-2">Good Swimming Pool</button>
-                <button class="btn btn-outline-primary mb-2">Good Cleanliness</button>
-            </div>
-        </div>
-        <div class="mt-2">
-            <div class="review-card mb-2">
-                <div class="d-flex justify-content-between">
-                    <h5><strong>Poor Stay</strong></h5>
-                    <span class="review-rating my-button p-2 rounded">2.0</span>
-                </div>
-                <p>Vishvesar P. • Everyone • Jan 05, 2025</p>
-                <p><strong>Deluxe AC Room</strong></p>
-                <p>Bathroom not spacious and rooms are not cross ventilated. Property is situated outside. Phone service
-                    is not proper working.</p>
-                <a href="#" class="my-text text-decoration-none">Helpful 👍</a>
-
-            </div>
-            <div class="review-card mb-2">
-                <div class="d-flex justify-content-between">
-                    <h5><strong>Nice place</strong></h5>
-                    <span class="review-rating my-button p-2 rounded">5.0</span>
-                </div>
-                <p>Bonna F. • Everyone • Oct 05, 2024</p>
-                <p><strong>Twin - Bedded Room</strong></p>
-                <p>Good stay good place not very far from Mapusa market. Water geyser was not working and in hotel
-                    dining people were not attentive to guest request.</p>
-                <a href="#" class="my-text text-decoration-none">Helpful 👍</a>
-
-            </div>
-        </div>
-
-    </div>
-
-
-    <div class="container mt-5 ">
-        <div class="similar-hotels-section">
-            <h2 class="similar-hotels-title fs-1 mt-3">Similar Hotels</h2>
-            <div class="similar-hotels-container d-flex flex-column align-items-center justify-content-center">
-                <div class="similar-hotel-card w-100 ">
-                    <img src="images/hotel1.png" class=" w-100 " alt="Hotel Red">
-                    <div class="similar-hotel-info mt-2">
-                        <h3>Hotel Red</h3>
-                        <p>New Delhi</p>
-                    </div>
-                </div>
-                <div class="similar-hotel-card w-100 ">
-                    <img src="images/hotel2.png" class=" w-100 " alt="Hotel 5 Stars">
-                    <div class="similar-hotel-info mt-2">
-                        <h3>Hotel 5 Stars</h3>
-                        <p>Qutub Minar, New Delhi</p>
-                    </div>
-                </div>
-                <div class="similar-hotel-card w-100  similar-hotel-popular">
-                    <img src="images/hotel3.png" class=" w-100 " alt="Luxury Rooms">
-                    <div class="similar-hotel-info mt-2">
-                        <h3>Luxury Rooms</h3>
-                        <p>Lodhi Garden</p>
-                    </div>
-                </div>
-                <div class="similar-hotel-card w-100 ">
-                    <img src="images/hotel4.png" class=" w-100 " alt="Every Night Hotel">
-                    <div class="similar-hotel-info mt-2">
-                        <h3>Every Night Hotel</h3>
-                        <p>Sarita Vihar, Delhi</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
 
 
 
 
     <!-- ---------------------------MODALS ----------------------------- -->
-
-
-    <!-- Booking Modal -->
-    <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-fullscreen m-0">
-            <div class="modal-content ">
-                <div class="modal-header modal-success text-white">
-                    <h5 class="modal-title" id="bookingModalLabel">Selected Rooms</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div id="roomList"></div> <!-- Selected rooms will be added here -->
-                </div>
-                <div class="modal-footer ">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Add more</button>
-                    <button type="button" class="btn text-white modal-success"
-                        onclick="window.location.href= 'order-summary.html';">Proceed to checkout</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <!-- terms and conditions modal----------------------- -->
-
-    <div class="modal fade term-and-Condition " id="termsModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-fullscreen m-0">
-            <div class="modal-content">
-                <div class="modal-header ">
-                    <h5 class="modal-title">Terms & Conditions</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <ul class="nav nav-tabs" id="termsTab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="must-read-tab" data-bs-toggle="tab"
-                                data-bs-target="#must-read" type="button" role="tab">Must Read Rules</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="guest-profile-tab" data-bs-toggle="tab"
-                                data-bs-target="#guest-profile" type="button" role="tab">Guest Profile</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="id-proof-tab" data-bs-toggle="tab" data-bs-target="#id-proof"
-                                type="button" role="tab">ID Proof Related</button>
-                        </li>
-                    </ul>
-                    <div class="tab-content mt-3" id="termsTabContent">
-                        <div class="tab-pane fade show active" id="must-read" role="tabpanel">
-                            <ul>
-                                <li>Unmarried couples are not allowed</li>
-                                <li>Passport, Aadhar, Driving License and Govt. ID are accepted as ID proof(s)</li>
-                                <li>Pets are not allowed</li>
-                                <li>Smoking within the premises is not allowed</li>
-                            </ul>
-                        </div>
-                        <div class="tab-pane fade" id="guest-profile" role="tabpanel">
-                            <ul>
-                                <li>Groups with only male guests are not allowed at this property</li>
-                                <li>Unmarried couples are not allowed</li>
-                            </ul>
-                        </div>
-                        <div class="tab-pane fade" id="id-proof" role="tabpanel">
-                            <ul>
-                                <li>Local IDs not allowed</li>
-                                <li>Passport, Aadhar, Driving License, and Govt. ID are accepted as ID proof(s)</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- --------------room details modal---------------- -->
-
-    <div class="modal fade" id="roomDetailsModal" tabindex="-1" aria-labelledby="roomDetailsLabel" aria-hidden="true">
-        <div class="modal-dialog modal-fullscreen m-0">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="roomDetailsLabel">
-                        <i class="fa-solid fa-bed"></i> Deluxe One Room
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body p-4"> <!-- replaced style="padding: 30px;" with p-4 -->
-
-                    <!-- Bootstrap Carousel for Image Slider -->
-                    <div id="roomSlider" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="images/hotel-image.webp" class="d-block w-100 rounded object-fit-cover"
-                                    style="height: 300px;" alt="Room Image 1">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/hotel-image.webp" class="d-block w-100 rounded object-fit-cover"
-                                    style="height: 300px;" alt="Room Image 2">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/hotel-image.webp" class="d-block w-100 rounded object-fit-cover"
-                                    style="height: 300px;" alt="Room Image 3">
-                            </div>
-                        </div>
-                        <!-- Carousel Controls -->
-                        <button class="carousel-control-prev" type="button" data-bs-target="#roomSlider"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#roomSlider"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        </button>
-                    </div>
-
-                    <!-- Hotel About Section -->
-                    <div class="mt-4">
-                        <h5><i class="fa-solid fa-hotel"></i> About This Hotel</h5>
-                        <p>Welcome to our luxurious deluxe room, offering a stunning city view and premium amenities.
-                            Designed for comfort and elegance, our hotel provides the perfect stay for both leisure and
-                            business travelers.</p>
-                    </div>
-
-                    <!-- Room Details -->
-                    <div class="mt-3 d-flex flex-wrap justify-content-between">
-                        <p class="mb-2"><i class="fa-solid fa-expand"></i> Size: 180 sq.ft (17 sq.mt)</p>
-                        <p class="mb-2"><i class="fa-solid fa-city"></i> View: City View</p>
-                        <p class="mb-2"><i class="fa-solid fa-bed"></i> Bed Type: King Bed</p>
-                    </div>
-
-                    <!-- Room Amenities -->
-                    <h5 class="mt-3"><i class="fa-solid fa-concierge-bell"></i> Room Amenities</h5>
-                    <ul class="list-unstyled">
-                        <li><i class="fa-solid fa-book"></i> Study Room</li>
-                        <li><i class="fa-solid fa-broom"></i> Housekeeping</li>
-                        <li><i class="fa-solid fa-shower"></i> Bathroom with Shower</li>
-                        <li><i class="fa-solid fa-toilet-paper"></i> Toiletries & Towels</li>
-                        <li><i class="fa-solid fa-bell-concierge"></i> Room Service</li>
-                        <li><i class="fa-solid fa-soap"></i> Laundry Service</li>
-                    </ul>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
 
 
     <!-- Modify Search Modal (Full Width) -->
@@ -626,6 +455,16 @@
 
                     <div class="container my-4">
                         <div class="search-box border border-warning border-2 rounded-3 p-3 shadow-sm bg-white">
+
+                            <!-- Location Input -->
+                            <div class="mb-3 d-flex align-items-center my-border p-2 rounded" data-bs-toggle="modal"
+                                data-bs-target="#locationModal">
+                                <i class="bi bi-geo-alt me-2"></i>
+                                <input type="text" class="form-control border-0 p-0" placeholder="Where are you going?"
+                                    readonly />
+                            </div>
+
+
 
                             <!-- Dates -->
                             <div class="row text-center mb-3 gap-2">
@@ -658,6 +497,15 @@
                                 <input type="text" id="guestSummaryInput" class="form-control border-0 p-0"
                                     placeholder="Add guests" data-bs-toggle="modal" data-bs-target="#guestsModal"
                                     readonly />
+                            </div>
+
+
+
+                            <!-- Country -->
+                            <div class="mb-3 d-flex align-items-center my-border p-2 rounded" data-bs-toggle="modal"
+                                data-bs-target="#countryModal">
+                                <i class="bi bi-globe-asia-australia me-2"></i>
+                                <input type="text" class="form-control border-0 p-0" placeholder="Country" readonly />
                             </div>
 
 
@@ -953,7 +801,6 @@
     </div>
 
 
-
     <!-- -------------------END MODALS------------------------------------- -->
 
 
@@ -963,7 +810,7 @@
     <footer class="app-footer">
         <div class="container py-4">
             <div class="footer-logo  mb-4">
-                <img src="images/logo.png" alt="FlyEasyGo" style="height: 50px;">
+                <img src="images/logo.png" alt="FlyEasyGo" >
                 <p class="mt-2 small">FlyEasyGo is more than just a Hotel booking app; it's your one-stop shop for
                     seamless travel experiences.</p>
             </div>
@@ -1082,8 +929,6 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="detailpageSlider.js"></script>
-
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -1183,44 +1028,6 @@
         });
 
     </script>
-
-
-    <script>
-        let roomCount = 0;
-
-        document.getElementById("bookNowBtn").addEventListener("click", function () {
-            let roomList = document.getElementById("roomList");
-
-            roomCount++;
-            let roomHTML = `
-    <div class="room-item d-flex justify-content-between align-items-center p-2 border rounded mt-2" id="room-${roomCount}">
-      <div>
-        <strong>Room ${roomCount}</strong><br>
-        <span>Superior Double Room-1</span><br>
-        <span class="text-black fs-5">$ 18,500 per night</span>
-      </div>
-      <button class="btn modal-error btn-sm text-white " onclick="removeRoom(${roomCount})">
-        <i class="fa fa-times"></i>
-      </button>
-    </div>
-  `;
-
-            roomList.innerHTML += roomHTML;
-
-            // Show the modal
-            let modal = new bootstrap.Modal(document.getElementById('bookingModal'));
-            modal.show();
-        });
-
-        function removeRoom(id) {
-            let roomElement = document.getElementById(`room-${id}`);
-            if (roomElement) {
-                roomElement.remove();
-            }
-        }
-    </script>
-
-
 </body>
 
 </html>

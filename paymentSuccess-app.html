@@ -25,7 +25,7 @@
         <nav class="navbar container justify-content-between align-items-center">
             <!-- Logo -->
             <a class="navbar-brand mx-2" href="#">
-                <img src="images/logo.png" alt="Logo" style="height: 40px;">
+                <img src="images/logo.png" alt="Logo">
             </a>
 
             <!-- Hamburger button to trigger offcanvas -->
@@ -49,7 +49,7 @@
         </div>
         <div class="offcanvas-body d-flex flex-column ">
             <a class="navbar-brand mb-4" href="#">
-                <img src="images/logo.png" alt="Logo" style="height: 40px;">
+                <img src="images/logo.png" alt="Logo">
             </a>
 
 
@@ -58,9 +58,9 @@
 
             <!-- Currency Dropdown -->
             <div class="dropdown mb-3">
-                <a class="nav-link dropdown-toggle d-flex align-items-center fs-5 fw-bold" href="#" role="button"
+                <a class="nav-link dropdown-toggle d-flex align-items-center fs-5 fw-bold Currency" href="#" role="button"
                     data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="images/india.png" alt="IN" style="height: 20px; margin-right: 8px;">Currency
+                    <img src="images/india.png" alt="IN">Currency
                 </a>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">INR - ₹</a></li>
@@ -151,8 +151,8 @@
                                     Room 1: 2 Adults 2 Children
                                 </span> <br>
                                 <div class="mt-3 ">
-                                    <i class="fas fa-wifi" style="margin-right: 10px;color: black;"></i>
-                                    <i class="fas fa-tv" style="color: black;"></i>
+                                    <i class="fas fa-wifi"></i>
+                                    <i class="fas fa-tv ms-2"></i>
                                 </div>
                             </div>
                         </div>
@@ -178,8 +178,8 @@
 
             <div class="col-md-12 col-12">
                 <h4 class="fw-bold my-text mt-4">Room Fare Breakup</h4>
-                <table class="table table-bordered text-center" style="border: 2px solid #007bd1;">
-                    <thead class="table-light" style="border: 2px solid #007bd1;">
+                <table class="table table-bordered text-center custom-border-blue">
+                    <thead class="table-light custom-border-blue">
                         <tr>
                             <th>Room Type</th>
                             <th>Room Price</th>
@@ -213,7 +213,7 @@
                             <td colspan="2" class="text-end">Discounts / goCash / goCash+:</td>
                             <td>- 592</td>
                         </tr>
-                        <tr class="modal-success text-white fw-bold">
+                        <tr class="bg-success text-white fw-bold">
                             <td colspan="2" class="text-end">Net Amount Paid:</td>
                             <td>₹ 6,524</td>
                         </tr>
@@ -224,58 +224,57 @@
             <div class="col-md-12 col-12">
                 <h4>Guests Details:</h4>
                 <div class="table-responsive mb-md-5">
-                    <table class="table table-bordered text-center align-middle" style="border: 2px solid #007bd1;">
-                        <thead class="table-light" style="border: 2px solid #007bd1;">
-                            <tr>
-                                <th>Sr No:</th>
-                                <th>Room Type</th>
-                                <th>Guest Type</th>
-                                <th>DOB</th>
-                                <th>GST Number</th>
-                                <th>PAN Number</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td><strong>Single Room</strong></td>
-                                <td>
-                                    <strong>1 Adult(s):</strong> - Mr. Rohit Singh
-                                </td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td><strong>Double Room</strong></td>
-                                <td>
-                                    <strong>1 Adult(s):</strong> - Mrs. Simran <br>
-                                    <strong>1 Child:</strong> - Master Ram
-                                </td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive overflow-x-auto">
+                        <table class="table table-bordered text-center align-middle custom-border-blue min-width-700">
+                            <thead class="table-light custom-border-blue">
+                                <tr>
+                                    <th>Sr No:</th>
+                                    <th>Room Type</th>
+                                    <th>Guest Type</th>
+                                    <th>DOB</th>
+                                    <th>GST Number</th>
+                                    <th>PAN Number</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td><strong>Single Room</strong></td>
+                                    <td>
+                                        <strong>1 Adult(s):</strong> - Mr. Rohit Singh
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td><strong>Double Room</strong></td>
+                                    <td>
+                                        <strong>1 Adult(s):</strong> - Mrs. Simran <br>
+                                        <strong>1 Child:</strong> - Master Ram
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
 
-
     <!-- <---------order summary end------------------- -->
-
-
 
 
 
     <footer class="app-footer">
         <div class="container py-4">
             <div class="footer-logo  mb-4">
-                <img src="images/logo.png" alt="FlyEasyGo" style="height: 50px;">
+                <img src="images/logo.png" alt="FlyEasyGo">
                 <p class="mt-2 small">FlyEasyGo is more than just a Hotel booking app; it's your one-stop shop for
                     seamless travel experiences.</p>
             </div>

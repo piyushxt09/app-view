@@ -25,7 +25,7 @@
         <nav class="navbar container justify-content-between align-items-center">
             <!-- Logo -->
             <a class="navbar-brand mx-2" href="#">
-                <img src="images/logo.png" alt="Logo" style="height: 40px;">
+                <img src="images/logo.png" alt="Logo">
             </a>
 
             <!-- Hamburger button to trigger offcanvas -->
@@ -49,7 +49,7 @@
         </div>
         <div class="offcanvas-body d-flex flex-column ">
             <a class="navbar-brand mb-4" href="#">
-                <img src="images/logo.png" alt="Logo" style="height: 40px;">
+                <img src="images/logo.png" alt="Logo">
             </a>
 
 
@@ -58,9 +58,9 @@
 
             <!-- Currency Dropdown -->
             <div class="dropdown mb-3">
-                <a class="nav-link dropdown-toggle d-flex align-items-center fs-5 fw-bold" href="#" role="button"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="images/india.png" alt="IN" style="height: 20px; margin-right: 8px;">Currency
+                <a class="nav-link dropdown-toggle d-flex align-items-center fs-5 fw-bold Currency" href="#"
+                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="images/india.png" alt="IN">Currency
                 </a>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">INR - ₹</a></li>
@@ -100,7 +100,7 @@
             <!-- Location Modal -->
             <div class="modal fade" id="locationModal" tabindex="-1" aria-hidden="true">
                 <div class="modal-dialog modal-fullscreen m-0">
-                    <div class="modal-content rounded-0" style="animation: slideDown 0.4s ease-out;">
+                    <div class="modal-content rounded-0">
                         <div class="modal-header border-0">
                             <h5 class="modal-title">Enter Destination</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
@@ -144,8 +144,8 @@
             </div>
 
             <!-- Dates -->
-            <div class="row text-center mb-3 gap-2">
-                <div class="col-5 my-border p-2 rounded ms-3" data-bs-toggle="modal" data-bs-target="#checkInModal">
+            <div class="d-flex text-center mb-3 gap-2">
+                <div class=" my-border p-2 rounded " data-bs-toggle="modal" data-bs-target="#checkInModal">
                     <small class="text-muted d-block">
                         <i class="bi bi-calendar-event me-1"></i> Check-in date
                     </small>
@@ -153,7 +153,7 @@
                         placeholder="Select date" readonly />
                 </div>
                 <!-- Trigger (Check-out Date) -->
-                <div class="col-5 my-border p-2 rounded " data-bs-toggle="modal" data-bs-target="#checkOutModal">
+                <div class=" my-border p-2 rounded " data-bs-toggle="modal" data-bs-target="#checkOutModal">
                     <small class="text-muted d-block">
                         <i class="bi bi-calendar-event me-1"></i> Check-out date
                     </small>
@@ -167,7 +167,7 @@
             <!-- Check-In Date Modal -->
             <div class="modal fade" id="checkInModal" tabindex="-1" aria-hidden="true">
                 <div class="modal-dialog modal-fullscreen m-0">
-                    <div class="modal-content rounded-0" style="animation: slideDown 0.4s ease-out;">
+                    <div class="modal-content rounded-0">
                         <div class="modal-header border-0">
                             <h5 class="modal-title">Select Check-in Date</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
@@ -183,7 +183,7 @@
             <!-- Check-Out Date Modal -->
             <div class="modal fade" id="checkOutModal" tabindex="-1" aria-hidden="true">
                 <div class="modal-dialog modal-fullscreen m-0">
-                    <div class="modal-content rounded-0" style="animation: slideDown 0.4s ease-out;">
+                    <div class="modal-content rounded-0">
                         <div class="modal-header border-0">
                             <h5 class="modal-title">Select Check-out Date</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
@@ -206,7 +206,7 @@
             <!-- Guests Modal -->
             <div class="modal fade" id="guestsModal" tabindex="-1" aria-hidden="true">
                 <div class="modal-dialog modal-fullscreen m-0">
-                    <div class="modal-content rounded-0" style="animation: slideDown 0.4s ease-out;">
+                    <div class="modal-content rounded-0">
                         <div class="modal-header border-0">
                             <h5 class="modal-title">Rooms & Guests</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
@@ -271,7 +271,7 @@
             <!-- Country Modal -->
             <div class="modal fade" id="countryModal" tabindex="-1" aria-hidden="true">
                 <div class="modal-dialog modal-fullscreen m-0">
-                    <div class="modal-content rounded-0" style="animation: slideDown 0.4s ease-out;">
+                    <div class="modal-content rounded-0">
                         <div class="modal-header border-0">
                             <h5 class="modal-title">Enter Country</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
@@ -357,8 +357,8 @@
         </div>
     </section>
 
-    <div class="container my-5">
-        <img src="images/hosting.png" alt="" style="max-width: 350px;">
+    <div class="container my-5 ">
+        <img class="vw100" src="images/hosting.png" alt="">
     </div>
 
 
@@ -373,7 +373,7 @@
 
         <div class="property-listings row">
             <div class="property-card">
-                <div class="property-image" style="background-image: url('images/img1.png');"></div>
+                <div class="property-image property-image1" style="background-image: url('images/img1.png');"></div>
                 <div class="property-info">
                     <p class="property-name fs-6">Beloshi’s Cliffhanger</p>
                     <p class="property-details">10 Bedrooms &nbsp; 10 Bathrooms</p>
@@ -385,7 +385,7 @@
             </div>
 
             <div class="property-card">
-                <div class="property-image" style="background-image: url('images/img2.png');"></div>
+                <div class="property-image property-image2" style="background-image: url('images/img2.png');"></div>
                 <div class="property-info">
                     <p class="property-name fs-6">Sky Penthouse | Luxurious 3bhk</p>
                     <p class="property-details">10 Bedroom &nbsp; 150 M &nbsp; 2 Garage</p>
@@ -397,7 +397,7 @@
             </div>
 
             <div class="property-card">
-                <div class="property-image" style="background-image: url('images/img3.png');"></div>
+                <div class="property-image property-image2" style="background-image: url('images/img3.png');"></div>
                 <div class="property-info">
                     <p class="property-name fs-6">Mystic Abode | An old colonial house</p>
                     <p class="property-details">10 Bedroom &nbsp; 150 M &nbsp; 2 Garage</p>
@@ -409,7 +409,7 @@
             </div>
 
             <div class="property-card">
-                <div class="property-image" style="background-image: url('images/img4.png');"></div>
+                <div class="property-image property-image4" style="background-image: url('images/img4.png');"></div>
                 <div class="property-info">
                     <p class="property-name fs-6">Waking Dream Cottage Bhimtal Lake View</p>
                     <p class="property-details">10 Bedroom &nbsp; 150 M &nbsp; 2 Garage</p>
@@ -483,13 +483,10 @@
     <!-- <---------home end------------------- -->
 
 
-
-
-
     <footer class="app-footer">
         <div class="container py-4">
             <div class="footer-logo  mb-4">
-                <img src="images/logo.png" alt="FlyEasyGo" style="height: 50px;">
+                <img src="images/logo.png" alt="FlyEasyGo">
                 <p class="mt-2 small">FlyEasyGo is more than just a Hotel booking app; it's your one-stop shop for
                     seamless travel experiences.</p>
             </div>

@@ -25,7 +25,7 @@
         <nav class="navbar container justify-content-between align-items-center">
             <!-- Logo -->
             <a class="navbar-brand mx-2" href="#">
-                <img src="images/logo.png" alt="Logo" style="height: 40px;">
+                <img src="images/logo.png" alt="Logo" >
             </a>
 
             <!-- Hamburger button to trigger offcanvas -->
@@ -49,7 +49,7 @@
         </div>
         <div class="offcanvas-body d-flex flex-column ">
             <a class="navbar-brand mb-4" href="#">
-                <img src="images/logo.png" alt="Logo" style="height: 40px;">
+                <img src="images/logo.png" alt="Logo" >
             </a>
 
 
@@ -58,9 +58,9 @@
 
             <!-- Currency Dropdown -->
             <div class="dropdown mb-3">
-                <a class="nav-link dropdown-toggle d-flex align-items-center fs-5 fw-bold" href="#" role="button"
+                <a class="nav-link dropdown-toggle d-flex align-items-center fs-5 fw-bold Currency" href="#" role="button"
                     data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="images/india.png" alt="IN" style="height: 20px; margin-right: 8px;">Currency
+                    <img src="images/india.png" alt="IN" >Currency
                 </a>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">INR - ₹</a></li>
@@ -147,7 +147,8 @@
                         <h5 class="card-title"><i class="fas fa-money-bill-wave me-2"></i> Refunds and Charges</h5>
 
                         <ul class="list-unstyled">
-                            <li><a href="support-details1-app.html" class=" text-decoration-none">Refund timelines, policies,
+                            <li><a href="support-details1-app.html" class=" text-decoration-none">Refund timelines,
+                                    policies,
                                     and
                                     processes →</a></li>
                             <li><a href="support-details1-app.html" class=" text-decoration-none">Get a receipt for your
@@ -174,10 +175,12 @@
                         <h5 class="card-title"><i class="fas fa-hotel me-2"></i> Lodging</h5>
 
                         <ul class="list-unstyled">
-                            <li><a href="support-details1-app.html" class=" text-decoration-none">Check-in and out of your
+                            <li><a href="support-details1-app.html" class=" text-decoration-none">Check-in and out of
+                                    your
                                     hotel
                                     →</a></li>
-                            <li><a href="support-details1-app.html" class=" text-decoration-none">Make special requests →</a>
+                            <li><a href="support-details1-app.html" class=" text-decoration-none">Make special requests
+                                    →</a>
                             </li>
                             <li><a href="support-details1-app.html" class=" text-decoration-none">Booking mistakes and
                                     changes
@@ -200,12 +203,15 @@
                         <h5 class="card-title"><i class="fas fa-user-circle me-2"></i> Account</h5>
 
                         <ul class="list-unstyled">
-                            <li><a href="support-details1-app.html" class=" text-decoration-none">View your booking →</a>
-                            </li>
-                            <li><a href="support-details1-app.html" class=" text-decoration-none">Update account information
+                            <li><a href="support-details1-app.html" class=" text-decoration-none">View your booking
                                     →</a>
                             </li>
-                            <li><a href="support-details1-app.html" class=" text-decoration-none">Changes to your account
+                            <li><a href="support-details1-app.html" class=" text-decoration-none">Update account
+                                    information
+                                    →</a>
+                            </li>
+                            <li><a href="support-details1-app.html" class=" text-decoration-none">Changes to your
+                                    account
                                     →</a></li>
                         </ul>
                     </div>
@@ -224,13 +230,16 @@
                         <h5 class="card-title"><i class="fas fa-user-shield me-2"></i> Privacy</h5>
 
                         <ul class="list-unstyled">
-                            <li><a href="support-details1-app.html" class=" text-decoration-none">Update account information
+                            <li><a href="support-details1-app.html" class=" text-decoration-none">Update account
+                                    information
                                     →</a>
                             </li>
-                            <li><a href="support-details1-app.html" class=" text-decoration-none">Information about privacy
+                            <li><a href="support-details1-app.html" class=" text-decoration-none">Information about
+                                    privacy
                                     →</a>
                             </li>
-                            <li><a href="support-details1-app.html" class=" text-decoration-none">Privacy and data rights
+                            <li><a href="support-details1-app.html" class=" text-decoration-none">Privacy and data
+                                    rights
                                     →</a></li>
                         </ul>
                     </div>
@@ -306,7 +315,7 @@
     <!-- -------------------modals---------------------- -->
 
     <!-- Error Toast Notification -->
-    <div class="position-fixed bottom-0 start-0 p-3" style="z-index: 100000;">
+    <div class="position-fixed bottom-0 start-0 p-3 " >
         <div id="errorToast" class="toast align-items-center text-white modal-error border-0" role="alert">
             <div class="d-flex">
                 <div class="toast-body">
@@ -344,23 +353,25 @@
                     </form>
 
                     <!-- Booking Details Table (Initially Hidden) -->
-                    <div id="bookingTableContainer" style="display: none;" class="mt-4">
+                    <div id="bookingTableContainer" class="mt-4">
                         <h5 class="text-center">Your Booking Details</h5>
-                        <table class="table table-bordered mt-3">
-                            <thead>
-                                <tr>
-                                    <th>Select</th>
-                                    <th>Booking Number</th>
-                                    <th>Guest Name</th>
-                                    <th>Hotel Name</th>
-                                    <th>Check-in</th>
-                                    <th>Check-out</th>
-                                </tr>
-                            </thead>
-                            <tbody id="bookingTableBody">
+                        <div class="overflow-x-auto">
+                            <table class="table table-bordered mt-3 min-width-700">
+                                <thead>
+                                    <tr>
+                                        <th>Select</th>
+                                        <th>Booking Number</th>
+                                        <th>Guest Name</th>
+                                        <th>Hotel Name</th>
+                                        <th>Check-in</th>
+                                        <th>Check-out</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="bookingTableBody">
 
-                            </tbody>
-                        </table>
+                                </tbody>
+                            </table>
+                        </div>
                         <div class="mb-3">
                             <label for="additional-request" class="form-label">Describe your reason for
                                 canceling</label>
@@ -411,7 +422,7 @@
                         <button type="submit" class="btn text-white modal-success">Track Booking</button>
                     </form>
 
-                    <div id="trackingBooking" style="display: none;">
+                    <div id="trackingBooking" >
                         <div class="order-tracker d-flex justify-content-between flex-column">
                             <div class="tracker-step" id="step-booked">
                                 <div class="icon-container"><i class="fas fa-check-circle"></i></div>
@@ -575,7 +586,7 @@
     <footer class="app-footer">
         <div class="container py-4">
             <div class="footer-logo  mb-4">
-                <img src="images/logo.png" alt="FlyEasyGo" style="height: 50px;">
+                <img src="images/logo.png" alt="FlyEasyGo" >
                 <p class="mt-2 small">FlyEasyGo is more than just a Hotel booking app; it's your one-stop shop for
                     seamless travel experiences.</p>
             </div>

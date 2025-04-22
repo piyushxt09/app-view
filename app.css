@@ -6,6 +6,11 @@
     --light-color: #eeeeee;
 }
 
+body{
+    overflow-x: hidden;
+}
+
+
 .my-text {
     color: var(--primary-color) !important;
 }

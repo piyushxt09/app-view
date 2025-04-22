@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Details</title>
+    <link rel="stylesheet" href="app.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- <---------loader----------------- -->
+    <div class="loader-overlay">
+        <div class="loader"></div>
+    </div>
+    <!-- -----------header start--------------- -->
+    <header class="bg-white shadow-sm">
+        <nav class="navbar container justify-content-between align-items-center">
+            <!-- Logo -->
+            <a class="navbar-brand mx-2" href="#">
+                <img src="images/logo.png" alt="Logo" style="height: 40px;">
+            </a>
+
+            <!-- Hamburger button to trigger offcanvas -->
+            <button class="btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
+                aria-controls="mobileMenu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-list"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm0-4a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm0-4a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11z" />
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+
+    <!-- Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end text-bg-light" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column ">
+            <a class="navbar-brand mb-4" href="#">
+                <img src="images/logo.png" alt="Logo" style="height: 40px;">
+            </a>
+
+
+            <a class="nav-link mb-3 fs-5 fw-bold" href="home-app.html">Home</a>
+            <a class="nav-link mb-3 fs-5 fw-bold" href="#">Support</a>
+
+            <!-- Currency Dropdown -->
+            <div class="dropdown mb-3">
+                <a class="nav-link dropdown-toggle d-flex align-items-center fs-5 fw-bold" href="#" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="images/india.png" alt="IN" style="height: 20px; margin-right: 8px;">Currency
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">INR - ₹</a></li>
+                    <li><a class="dropdown-item" href="#">USD - $</a></li>
+                    <li><a class="dropdown-item" href="#">EUR - €</a></li>
+                </ul>
+            </div>
+
+            <!-- Login/Signup -->
+            <div class="d-flex gap-2 align-items-center justify-content-around">
+                <a href="login.html" class="btn  my-button  w-50">Login</a>
+                <a href="signup.html" class="btn my-button w-50">Sign Up</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ----------header end---------------- -->
+
+    <!-- ---------order summary page--------------- -->
+
+
+    <div class="success-container mb-3">
+        <div class="success-icon text-center">
+            <i class="fas fa-check"></i>
+        </div>
+        <h4 class="mt-3">Thank You! Payment Successful</h4>
+        <p class="mb-1 booking-id">Booking ID - <span class="text-dark">0236486121</span></p>
+    </div>
+
+
+    <div class="order-summary-page container my-3">
+
+        <div class="mb-3 w-100 ">
+            <div class="d-flex justify-content-between">
+                <h5 class="mb-1">Hotel Lodhi Garden</h5>
+                <a href="#" class="text-decoration-underline my-text">Download invoice</a>
+            </div>
+            <p class="mb-1 text-muted">Lodhi Rd, CGO Complex, Pragati Vihar, New Delhi, Delhi - 110003</p>
+            <p class="mb-0"><strong>Ph:</strong> <span class="my-text">00223343533, 2244522525</span></p>
+        </div>
+
+
+
+
+        <h3 class="mt-4">Checkin details</h3>
+        <div class="booking-card2">
+            <div class="booking-content2">
+
+                <div class="booking-details2">
+                    <div class="name d-flex ps-4 pe-3 justify-content-between pt-3">
+                        <div>
+                            <div class="hotel-name2">Hotel Lodhi Garden
+                            </div>
+                            <div class="hotel-location2"><i class="fa-solid fa-location-dot"></i> Lodhi
+                                Road,
+                                New
+                                Delhi
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="dates2">
+
+                        <div class="checkin-out2 d-flex align-items-center gap-5 ps-4 mt-4">
+                            <div class="check-box2">
+                                Check-In
+                                <span> 23</span>
+                                <div>
+                                    Oct | 10:00 AM
+                                </div>
+                            </div>
+                            <div class="check-box2">
+                                Check-Out
+                                <span> 25</span>
+                                <div>
+
+                                    Oct | 12:00 PM
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="ps-4 mt-3">
+                            <div class="booking-info2"><i class="fa-solid fa-calendar"></i> 4 Days & 3
+                                Nights<br><i class="fa-solid fa-user"></i> <span>
+                                    Room 1: 2 Adults 2 Children
+                                </span> <br>
+                                <div class="mt-3 ">
+                                    <i class="fas fa-wifi" style="margin-right: 10px;color: black;"></i>
+                                    <i class="fas fa-tv" style="color: black;"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reviews2 ps-4 py-3 fs-5 text-end me-2">Reviews <span
+                                class="rating my-button p-1 rounded">
+                                4.5</span></div>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-12 col-12">
+                <h4 class="fw-bold my-text mt-4">Room Fare Breakup</h4>
+                <table class="table table-bordered text-center" style="border: 2px solid #007bd1;">
+                    <thead class="table-light" style="border: 2px solid #007bd1;">
+                        <tr>
+                            <th>Room Type</th>
+                            <th>Room Price</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Single Room</td>
+                            <td>1200 * 2</td>
+                            <td>2400</td>
+                        </tr>
+                        <tr>
+                            <td>Double Room</td>
+                            <td>2000 * 2</td>
+                            <td>4000</td>
+                        </tr>
+                        <tr class="fw-bold">
+                            <td colspan="2" class="text-end">Sub Total:</td>
+                            <td>(6400)</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="text-end">Convenience Fees:</td>
+                            <td>+ 106</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="text-end">GST collected on behalf of hotel:</td>
+                            <td>+ 227</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="text-end">Discounts / goCash / goCash+:</td>
+                            <td>- 592</td>
+                        </tr>
+                        <tr class="modal-success text-white fw-bold">
+                            <td colspan="2" class="text-end">Net Amount Paid:</td>
+                            <td>₹ 6,524</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-md-12 col-12">
+                <h4>Guests Details:</h4>
+                <div class="table-responsive mb-md-5">
+                    <table class="table table-bordered text-center align-middle" style="border: 2px solid #007bd1;">
+                        <thead class="table-light" style="border: 2px solid #007bd1;">
+                            <tr>
+                                <th>Sr No:</th>
+                                <th>Room Type</th>
+                                <th>Guest Type</th>
+                                <th>DOB</th>
+                                <th>GST Number</th>
+                                <th>PAN Number</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><strong>Single Room</strong></td>
+                                <td>
+                                    <strong>1 Adult(s):</strong> - Mr. Rohit Singh
+                                </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><strong>Double Room</strong></td>
+                                <td>
+                                    <strong>1 Adult(s):</strong> - Mrs. Simran <br>
+                                    <strong>1 Child:</strong> - Master Ram
+                                </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- <---------order summary end------------------- -->
+
+
+
+
+
+    <footer class="app-footer">
+        <div class="container py-4">
+            <div class="footer-logo  mb-4">
+                <img src="images/logo.png" alt="FlyEasyGo" style="height: 50px;">
+                <p class="mt-2 small">FlyEasyGo is more than just a Hotel booking app; it's your one-stop shop for
+                    seamless travel experiences.</p>
+            </div>
+
+            <!-- Accordion Sections -->
+            <div class="accordion" id="footerAccordion">
+                <!-- Section 1 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="aboutHeading">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#aboutCollapse">
+                            About Us
+                        </button>
+                    </h2>
+                    <div id="aboutCollapse" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-unstyled mb-0">
+                                <li><a href="#">Promo</a></li>
+                                <li><a href="#">Help</a></li>
+                                <li><a href="#">Order</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">FAQ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="resourcesHeading">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#resourcesCollapse ">
+                            Resources
+                        </button>
+                    </h2>
+                    <div id="resourcesCollapse" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-unstyled mb-0">
+                                <li><a href="#">Documentation</a></li>
+                                <li><a href="#">Carrier</a></li>
+                                <li><a href="#">Work With Us</a></li>
+                                <li><a href="#">Blog & News</a></li>
+                                <li><a href="#">Affiliate</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 3 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="legalHeading">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#legalCollapse">
+                            Legal
+                        </button>
+                    </h2>
+                    <div id="legalCollapse" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-unstyled mb-0">
+                                <li><a href="#">Terms and Conditions</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Cookies Policy</a></li>
+                                <li><a href="#">Developers</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 4 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="contactHeading">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#contactCollapse">
+                            Contact Us
+                        </button>
+                    </h2>
+                    <div id="contactCollapse" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-unstyled mb-3">
+                                <li>FlyEasyGo@gmail.com</li>
+                                <li>+91 9455 6778 09</li>
+                                <li>India</li>
+                            </ul>
+                            <div>
+                                <h6>Follow Us On Social</h6>
+                                <div class="d-flex flex-wrap gap-3">
+                                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
+                                            width="24" alt="Facebook"></a>
+                                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png"
+                                            width="24" alt="Twitter"></a>
+                                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+                                            width="24" alt="LinkedIn"></a>
+                                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733590.png"
+                                            width="24" alt="YouTube"></a>
+                                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
+                                            width="24" alt="Instagram"></a>
+                                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046123.png"
+                                            width="24" alt="TikTok"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Text -->
+            <div class="text-center mt-4 small text-muted">
+                © 2024 FlyEasyGo. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Flatpickr -->
+    <link href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>

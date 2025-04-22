@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Page</title>
+    <link rel="stylesheet" href="app.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- <---------loader----------------- -->
+    <div class="loader-overlay">
+        <div class="loader"></div>
+    </div>
+    <!-- -----------header start--------------- -->
+    <header class="bg-white shadow-sm">
+        <nav class="navbar container justify-content-between align-items-center">
+            <!-- Logo -->
+            <a class="navbar-brand mx-2" href="#">
+                <img src="images/logo.png" alt="Logo" style="height: 40px;">
+            </a>
+
+            <!-- Hamburger button to trigger offcanvas -->
+            <button class="btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
+                aria-controls="mobileMenu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-list"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm0-4a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm0-4a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11z" />
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+
+    <!-- Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end text-bg-light" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column ">
+            <a class="navbar-brand mb-4" href="#">
+                <img src="images/logo.png" alt="Logo" style="height: 40px;">
+            </a>
+
+
+            <a class="nav-link mb-3 fs-5 fw-bold" href="home-app.html">Home</a>
+            <a class="nav-link mb-3 fs-5 fw-bold" href="#">Support</a>
+
+            <!-- Currency Dropdown -->
+            <div class="dropdown mb-3">
+                <a class="nav-link dropdown-toggle d-flex align-items-center fs-5 fw-bold" href="#" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="images/india.png" alt="IN" style="height: 20px; margin-right: 8px;">Currency
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">INR - ₹</a></li>
+                    <li><a class="dropdown-item" href="#">USD - $</a></li>
+                    <li><a class="dropdown-item" href="#">EUR - €</a></li>
+                </ul>
+            </div>
+
+            <!-- Login/Signup -->
+            <div class="d-flex gap-2 align-items-center justify-content-around">
+                <a href="login.html" class="btn  my-button  w-50">Login</a>
+                <a href="signup.html" class="btn my-button w-50">Sign Up</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ----------header end---------------- -->
+
+    <!-- ---------support page--------------- -->
+
+    <div class="supportPage">
+        <div class="container text-center">
+            <h1 class="text-primary fs-4 text-white text-center">Support Center</h1>
+            <p class="text-white text-center">Browse through our frequently asked questions, tutorials, and other
+                self-help
+                resources to find the answers you need.</p>
+
+            <div class="d-flex align-items-center justify-content-center">
+                <div class="input-group w-100 shadow-sm">
+                    <span class="input-group-text bg-white"><i class="fas fa-search text-primary"></i></span>
+                    <input type="text" class="form-control" placeholder="How can we help?" aria-label="Search">
+                    <button class="btn btn-primary">Search</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container help-article-section">
+        <h1 class="help-title text-center">Need help? We've got your back</h1>
+        <div class="row g-3">
+            <!-- Card 1 - Cancel Hotel Booking -->
+            <div class="col-md-3 col-6">
+                <div class="card help-card" data-bs-toggle="modal" data-bs-target="#cancelTicketModal">
+                    <img src="images/cross-icon.png" alt="Cancel Hotel Booking">
+                    <h6>Cancel Hotel Booking</h6>
+                </div>
+            </div>
+
+            <!-- Card 2 - Claim Refund -->
+            <div class="col-md-3 col-6">
+                <div class="card help-card" data-bs-toggle="modal" data-bs-target="#trackingModal">
+                    <img src="images/tracking.png" alt="Claim Refund">
+                    <h6>Track Cancel Booking</h6>
+                </div>
+            </div>
+
+            <!-- Card 3 - Reschedule Flight -->
+            <div class="col-md-3 col-6">
+                <div class="card help-card" data-bs-toggle="modal" data-bs-target="#rescheduleHotelModal">
+                    <img src="images/reschedule.png" alt="Reschedule Flight">
+                    <h6>Reschedule Hotel Booking</h6>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-6">
+                <div class="card help-card " data-bs-toggle="modal" data-bs-target="#specialServiceRequest">
+                    <img src="images/special.png" alt="Special Service Request">
+                    <h6>Special Service Request</h6>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container py-1 Explore-more mb-5">
+        <h2 class="">Explore help articles</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-0">
+            <!-- Card 1 -->
+            <div class="col mt-2">
+                <div class="card shadow-sm border rounded-3">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-money-bill-wave me-2"></i> Refunds and Charges</h5>
+
+                        <ul class="list-unstyled">
+                            <li><a href="support-details1-app.html" class=" text-decoration-none">Refund timelines, policies,
+                                    and
+                                    processes →</a></li>
+                            <li><a href="support-details1-app.html" class=" text-decoration-none">Get a receipt for your
+                                    booking
+                                    →</a></li>
+                            <li><a href="support-details1-app.html" class=" text-decoration-none">Payment security and
+                                    options
+                                    →</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                        <hr>
+                        <a href="support-more.html" class="text-primary text-decoration-none"><i
+                                class="fas fa-book-open me-2"></i>More
+                            ></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col mt-4">
+                <div class="card shadow-sm border rounded-3">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-hotel me-2"></i> Lodging</h5>
+
+                        <ul class="list-unstyled">
+                            <li><a href="support-details1-app.html" class=" text-decoration-none">Check-in and out of your
+                                    hotel
+                                    →</a></li>
+                            <li><a href="support-details1-app.html" class=" text-decoration-none">Make special requests →</a>
+                            </li>
+                            <li><a href="support-details1-app.html" class=" text-decoration-none">Booking mistakes and
+                                    changes
+                                    →</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                        <hr>
+                        <a href="support-more.html" class="text-primary text-decoration-none"><i
+                                class="fas fa-book-open me-2"></i>More
+                            ></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col mt-4">
+                <div class="card shadow-sm border rounded-3">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-user-circle me-2"></i> Account</h5>
+
+                        <ul class="list-unstyled">
+                            <li><a href="support-details1-app.html" class=" text-decoration-none">View your booking →</a>
+                            </li>
+                            <li><a href="support-details1-app.html" class=" text-decoration-none">Update account information
+                                    →</a>
+                            </li>
+                            <li><a href="support-details1-app.html" class=" text-decoration-none">Changes to your account
+                                    →</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                        <hr>
+                        <a href="support-more.html" class="text-primary text-decoration-none"><i
+                                class="fas fa-book-open me-2"></i>More
+                            ></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="col mt-4">
+                <div class="card shadow-sm border rounded-3">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-user-shield me-2"></i> Privacy</h5>
+
+                        <ul class="list-unstyled">
+                            <li><a href="support-details1-app.html" class=" text-decoration-none">Update account information
+                                    →</a>
+                            </li>
+                            <li><a href="support-details1-app.html" class=" text-decoration-none">Information about privacy
+                                    →</a>
+                            </li>
+                            <li><a href="support-details1-app.html" class=" text-decoration-none">Privacy and data rights
+                                    →</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                        <hr>
+                        <a href="support-more.html" class="text-primary text-decoration-none"><i
+                                class="fas fa-book-open me-2"></i>More
+                            ></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="col mt-4">
+                <div class="card shadow-sm border rounded-3">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-shield-alt me-2"></i> Security</h5>
+
+                        <ul class="list-unstyled">
+                            <li><a href="support-details1-app.html" class=" text-decoration-none">Payment security and
+                                    options
+                                    →</a>
+                            </li>
+                            <li><a href="support-details1-app.html" class=" text-decoration-none">Beware of email scams
+                                    →</a>
+                            </li>
+                            <li><a href="support-details1-app.html" class=" text-decoration-none">Responsible disclosure
+                                    →</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                        <hr>
+                        <a href="support-more.html" class="text-primary text-decoration-none"><i
+                                class="fas fa-book-open me-2"></i>More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="col mt-4">
+                <div class="card shadow-sm border rounded-3">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-gift me-2"></i> Loyalty & Rewards</h5>
+
+                        <ul class="list-unstyled">
+                            <li><a href="support-details1-app.html" class=" text-decoration-none">Redeem FlyEasyGO.com
+                                    Rewards
+                                    →</a>
+                            </li>
+                            <li><a href="support-details1-app.html" class=" text-decoration-none">Join Rewards and earn
+                                    nights
+                                    →</a>
+                            </li>
+                            <li><a href="support-details1-app.html" class=" text-decoration-none">Collect Rewards stamps
+                                    →</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                        <hr>
+                        <a href="support-more.html" class="text-primary text-decoration-none"><i
+                                class="fas fa-book-open me-2"></i>More
+                            ></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <---------support page end------------------- -->
+
+
+    <!-- -------------------modals---------------------- -->
+
+    <!-- Error Toast Notification -->
+    <div class="position-fixed bottom-0 start-0 p-3" style="z-index: 100000;">
+        <div id="errorToast" class="toast align-items-center text-white modal-error border-0" role="alert">
+            <div class="d-flex">
+                <div class="toast-body">
+                    <i class="fas fa-exclamation-triangle"></i> Please fill in all fields before submitting!
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cancel Hotel Booking Modal -->
+    <div class="modal fade" id="cancelTicketModal" tabindex="-1" aria-labelledby="cancelTicketModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen m-0">
+            <div class="modal-content">
+                <div class="modal-header modal-success">
+                    <h5 class="modal-title text-white" id="cancelTicketModalLabel ">Cancel Hotel Booking</h5>
+                    <button type="button" class="btn-close text-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Form Section -->
+                    <form id="cancelForm">
+                        <div class="">
+                            <div class="mb-3 w-100">
+                                <label for="pnr" class="form-label">Booking Number</label>
+                                <input type="text" class="form-control" id="pnr" placeholder="Enter booking number">
+                            </div>
+                            <div class="mb-3 w-100">
+                                <label for="name" class="form-label">Guest Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter Name">
+                            </div>
+                        </div>
+                        <button type="submit" class=" btn text-white modal-success">Submit Request</button>
+                    </form>
+
+                    <!-- Booking Details Table (Initially Hidden) -->
+                    <div id="bookingTableContainer" style="display: none;" class="mt-4">
+                        <h5 class="text-center">Your Booking Details</h5>
+                        <table class="table table-bordered mt-3">
+                            <thead>
+                                <tr>
+                                    <th>Select</th>
+                                    <th>Booking Number</th>
+                                    <th>Guest Name</th>
+                                    <th>Hotel Name</th>
+                                    <th>Check-in</th>
+                                    <th>Check-out</th>
+                                </tr>
+                            </thead>
+                            <tbody id="bookingTableBody">
+
+                            </tbody>
+                        </table>
+                        <div class="mb-3">
+                            <label for="additional-request" class="form-label">Describe your reason for
+                                canceling</label>
+                            <textarea class="form-control" id="additional-request" rows="3" placeholder="Enter details"
+                                required></textarea>
+                        </div>
+
+                        <button id="cancelBookingBtn" class="btn btn-danger w-100" disabled
+                            onclick="cancelBooking()">Cancel Booking</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Confirmation Popup -->
+    <div class="confirmation-popup" id="confirmationPopup">
+        <i class="fas fa-check-circle"></i>
+        <h4>Booking Cancelled!</h4>
+        <p>Your cancellation request for Booking <span id="cancelledBookingNumber"></span> has been processed.</p>
+    </div>
+
+
+
+
+    <!-- Tracking Booking Modal -->
+    <div class="modal fade" id="trackingModal" tabindex="-1" aria-labelledby="trackHotelBooking" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen m-0">
+            <div class="modal-content ">
+                <div class="modal-header modal-success">
+                    <h5 class="modal-title text-white" id="trackHotelBooking">Track Cancel Booking</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="trackBookingForm">
+                        <div class="">
+                            <div class="mb-3 w-100">
+                                <label for="booking-number" class="form-label">Booking Number (PNR)</label>
+                                <input type="text" class="form-control" id="booking-number"
+                                    placeholder="Enter Booking Number">
+                            </div>
+                            <div class="mb-3 w-100">
+                                <label for="guest-name" class="form-label">Guest Name</label>
+                                <input type="text" class="form-control" id="guest-name" placeholder="Enter Guest Name">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn text-white modal-success">Track Booking</button>
+                    </form>
+
+                    <div id="trackingBooking" style="display: none;">
+                        <div class="order-tracker d-flex justify-content-between flex-column">
+                            <div class="tracker-step" id="step-booked">
+                                <div class="icon-container"><i class="fas fa-check-circle"></i></div>
+                                <p>Booked</p>
+                            </div>
+                            <div class="tracker-step" id="step-payment">
+                                <div class="icon-container"><i class="fas fa-check-circle"></i></div>
+                                <p>Payment Done</p>
+                            </div>
+                            <div class="tracker-step" id="step-cancelled">
+                                <div class="icon-container"><i class="fas fa-check-circle"></i></div>
+                                <p>Cancelled</p>
+                            </div>
+                            <div class="tracker-step" id="step-refund-initiated">
+                                <div class="icon-container"><i class="fas fa-check-circle"></i></div>
+                                <p>Refund Initiated</p>
+                            </div>
+                            <div class="tracker-step" id="step-refund-complete">
+                                <div class="icon-container"><i class="fas fa-clock"></i></div>
+                                <p>Refund Complete</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- Reschedule Hotel Booking Modal -->
+    <div class="modal fade" id="rescheduleHotelModal" tabindex="-1" aria-labelledby="rescheduleHotelModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen m-0">
+            <div class="modal-content">
+                <div class="modal-header modal-success">
+                    <h5 class="modal-title text-white" id="rescheduleHotelModalLabel">Reschedule Hotel Booking</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="rescheduleForm">
+                        <!-- Booking Details -->
+                        <div class="">
+                            <div class="mb-3 ">
+                                <label for="pnr-reschedule" class="form-label">Booking Number (PNR)</label>
+                                <input type="text" class="form-control" id="pnr-reschedule"
+                                    placeholder="Enter Booking Number">
+                            </div>
+                            <div class="mb-3 ">
+                                <label for="name-reschedule" class="form-label">Guest Name</label>
+                                <input type="text" class="form-control" id="name-reschedule"
+                                    placeholder="Enter Guest Name">
+                            </div>
+                        </div>
+
+                        <!-- New Rescheduling Details -->
+                        <div class="">
+                            <div class="mb-3 ">
+                                <label for="new-checkin" class="form-label">New Check-in Date</label>
+                                <input type="date" class="form-control" id="new-checkin">
+                            </div>
+                            <div class="mb-3 ">
+                                <label for="new-checkout" class="form-label">New Check-out Date</label>
+                                <input type="date" class="form-control" id="new-checkout">
+                            </div>
+                        </div>
+
+                        <!-- Reason for Rescheduling -->
+                        <div class="mb-3">
+                            <label for="reschedule-reason" class="form-label">Reason for Rescheduling</label>
+                            <select class="form-select" id="reschedule-reason">
+                                <option value="">Select a reason</option>
+                                <option value="personal">Personal Reasons</option>
+                                <option value="health">Health Issues</option>
+                                <option value="travel">Travel Delays</option>
+                                <option value="others">Other</option>
+                            </select>
+                        </div>
+
+                        <!-- Additional Request (Optional) -->
+                        <div class="mb-3">
+                            <label for="additional-request" class="form-label">Describe your reason</label>
+                            <textarea class="form-control" id="additional-request" rows="3" placeholder="Enter details"
+                                required></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn modal-success text-white">Submit Reschedule
+                            Request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Special Service Request Modal -->
+    <div class="modal fade" id="specialServiceRequest" tabindex="-1" aria-labelledby="specialServiceRequestModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen m-0">
+            <div class="modal-content">
+                <div class="modal-header modal-success">
+                    <h5 class="modal-title text-white" id="specialServiceRequestModalLabel">Special Service Request</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="specialServiceForm">
+                        <div class="">
+                            <!-- Booking Details -->
+                            <div class="mb-3 w-100">
+                                <label for="pnr-service" class="form-label">Booking Number (PNR)</label>
+                                <input type="text" class="form-control" id="pnr-service"
+                                    placeholder="Enter Booking Number">
+                            </div>
+                            <div class="mb-3 w-100">
+                                <label for="name-service" class="form-label">Guest Name</label>
+                                <input type="text" class="form-control" id="name-service"
+                                    placeholder="Enter Guest Name">
+                            </div>
+
+                        </div>
+
+                        <!-- Special Service Selection -->
+                        <div class="mb-3">
+                            <label for="service-type" class="form-label">Select Special Service</label>
+                            <select class="form-select" id="service-type">
+                                <option value="">Choose a service</option>
+                                <option value="wheelchair">Wheelchair Assistance</option>
+                                <option value="extra-pillows">Extra Pillows</option>
+                                <option value="dietary">Dietary/Food Preferences</option>
+                                <option value="room-cleaning">Room Cleaning Request</option>
+                                <option value="others">Other</option>
+                            </select>
+                        </div>
+
+                        <!-- Additional Request (Optional) -->
+                        <div class="mb-3">
+                            <label for="additional-request" class="form-label">Additional Request (Optional)</label>
+                            <textarea class="form-control" id="additional-request" rows="3"
+                                placeholder="Enter details"></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn modal-success text-white">Submit Request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- ----------footer--------------- -->
+
+    <footer class="app-footer">
+        <div class="container py-4">
+            <div class="footer-logo  mb-4">
+                <img src="images/logo.png" alt="FlyEasyGo" style="height: 50px;">
+                <p class="mt-2 small">FlyEasyGo is more than just a Hotel booking app; it's your one-stop shop for
+                    seamless travel experiences.</p>
+            </div>
+
+            <!-- Accordion Sections -->
+            <div class="accordion" id="footerAccordion">
+                <!-- Section 1 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="aboutHeading">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#aboutCollapse">
+                            About Us
+                        </button>
+                    </h2>
+                    <div id="aboutCollapse" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-unstyled mb-0">
+                                <li><a href="#">Promo</a></li>
+                                <li><a href="#">Help</a></li>
+                                <li><a href="#">Order</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">FAQ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="resourcesHeading">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#resourcesCollapse ">
+                            Resources
+                        </button>
+                    </h2>
+                    <div id="resourcesCollapse" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-unstyled mb-0">
+                                <li><a href="#">Documentation</a></li>
+                                <li><a href="#">Carrier</a></li>
+                                <li><a href="#">Work With Us</a></li>
+                                <li><a href="#">Blog & News</a></li>
+                                <li><a href="#">Affiliate</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 3 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="legalHeading">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#legalCollapse">
+                            Legal
+                        </button>
+                    </h2>
+                    <div id="legalCollapse" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-unstyled mb-0">
+                                <li><a href="#">Terms and Conditions</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Cookies Policy</a></li>
+                                <li><a href="#">Developers</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 4 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="contactHeading">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#contactCollapse">
+                            Contact Us
+                        </button>
+                    </h2>
+                    <div id="contactCollapse" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-unstyled mb-3">
+                                <li>FlyEasyGo@gmail.com</li>
+                                <li>+91 9455 6778 09</li>
+                                <li>India</li>
+                            </ul>
+                            <div>
+                                <h6>Follow Us On Social</h6>
+                                <div class="d-flex flex-wrap gap-3">
+                                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
+                                            width="24" alt="Facebook"></a>
+                                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png"
+                                            width="24" alt="Twitter"></a>
+                                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+                                            width="24" alt="LinkedIn"></a>
+                                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733590.png"
+                                            width="24" alt="YouTube"></a>
+                                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
+                                            width="24" alt="Instagram"></a>
+                                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046123.png"
+                                            width="24" alt="TikTok"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Text -->
+            <div class="text-center mt-4 small text-muted">
+                © 2024 FlyEasyGo. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- -----------footer end--------------------- -->
+
+    <!-- Flatpickr -->
+    <link href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="cancle.js"></script>
+    <script src="reschedule.js"></script>
+    <script src="specialRequest.js"></script>
+    <script src="tracking.js"></script>
+
+
+
+
+</body>
+
+</html>

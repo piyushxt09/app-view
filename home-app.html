@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="app.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- <---------loader----------------- -->
+    <div class="loader-overlay">
+        <div class="loader"></div>
+    </div>
+    <!-- -----------header start--------------- -->
+    <header class="bg-white shadow-sm">
+        <nav class="navbar container justify-content-between align-items-center">
+            <!-- Logo -->
+            <a class="navbar-brand mx-2" href="#">
+                <img src="images/logo.png" alt="Logo" style="height: 40px;">
+            </a>
+
+            <!-- Hamburger button to trigger offcanvas -->
+            <button class="btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
+                aria-controls="mobileMenu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-list"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm0-4a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm0-4a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11z" />
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+
+    <!-- Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end text-bg-light" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column ">
+            <a class="navbar-brand mb-4" href="#">
+                <img src="images/logo.png" alt="Logo" style="height: 40px;">
+            </a>
+
+
+            <a class="nav-link mb-3 fs-5 fw-bold" href="home-app.html">Home</a>
+            <a class="nav-link mb-3 fs-5 fw-bold" href="#">Support</a>
+
+            <!-- Currency Dropdown -->
+            <div class="dropdown mb-3">
+                <a class="nav-link dropdown-toggle d-flex align-items-center fs-5 fw-bold" href="#" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="images/india.png" alt="IN" style="height: 20px; margin-right: 8px;">Currency
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">INR - ₹</a></li>
+                    <li><a class="dropdown-item" href="#">USD - $</a></li>
+                    <li><a class="dropdown-item" href="#">EUR - €</a></li>
+                </ul>
+            </div>
+
+            <!-- Login/Signup -->
+            <div class="d-flex gap-2 align-items-center justify-content-around">
+                <a href="login.html" class="btn  my-button  w-50">Login</a>
+                <a href="signup.html" class="btn my-button w-50">Sign Up</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ----------header end---------------- -->
+
+    <!-- ---------home page--------------- -->
+
+
+    <div class="container my-4">
+        <h2 class="fs-1 fw-bold">Vacation Rentals in India</h2>
+        <p class="fs-6">Find and book unique accommodation on Rentals</p>
+
+        <div class="search-box border border-warning border-2 rounded-3 p-3 shadow-sm bg-white">
+
+            <!-- Location Input -->
+            <div class="mb-3 d-flex align-items-center my-border p-2 rounded" data-bs-toggle="modal"
+                data-bs-target="#locationModal">
+                <i class="bi bi-geo-alt me-2"></i>
+                <input type="text" class="form-control border-0 p-0" placeholder="Where are you going?" readonly />
+            </div>
+
+            <!-- Location Modal -->
+            <div class="modal fade" id="locationModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen m-0">
+                    <div class="modal-content rounded-0" style="animation: slideDown 0.4s ease-out;">
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title">Enter Destination</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text bg-white border-0"><i class="bi bi-search"></i></span>
+                                <input type="text" class="form-control border-0"
+                                    placeholder="e.g. city, landmark, address">
+                            </div>
+
+                            <div class="mb-3">
+                                <div class="d-flex align-items-center mb-2 text-primary">
+                                    <i class="bi bi-geo-alt me-2"></i> Around current location
+                                </div>
+
+                                <p class="text-muted mb-1 fw-bold">Popular nearby destinations</p>
+
+                                <ul class="list-unstyled">
+                                    <li class="d-flex align-items-start mb-3"><i class="bi bi-geo-alt me-2 mt-1"></i>
+                                        <div><strong>Prayagraj</strong><br><small>India</small></div>
+                                    </li>
+                                    <li class="d-flex align-items-start mb-3"><i class="bi bi-geo-alt me-2 mt-1"></i>
+                                        <div><strong>New Delhi</strong><br><small>India</small></div>
+                                    </li>
+                                    <li class="d-flex align-items-start mb-3"><i class="bi bi-geo-alt me-2 mt-1"></i>
+                                        <div><strong>Varanasi</strong><br><small>India</small></div>
+                                    </li>
+                                    <li class="d-flex align-items-start mb-3"><i class="bi bi-geo-alt me-2 mt-1"></i>
+                                        <div><strong>Mumbai</strong><br><small>India</small></div>
+                                    </li>
+                                    <li class="d-flex align-items-start mb-3"><i class="bi bi-geo-alt me-2 mt-1"></i>
+                                        <div><strong>Goa</strong><br><small>India</small></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dates -->
+            <div class="row text-center mb-3 gap-2">
+                <div class="col-5 my-border p-2 rounded ms-3" data-bs-toggle="modal" data-bs-target="#checkInModal">
+                    <small class="text-muted d-block">
+                        <i class="bi bi-calendar-event me-1"></i> Check-in date
+                    </small>
+                    <input type="text" id="checkInInput" class="form-control text-center border-0 fw-bold"
+                        placeholder="Select date" readonly />
+                </div>
+                <!-- Trigger (Check-out Date) -->
+                <div class="col-5 my-border p-2 rounded " data-bs-toggle="modal" data-bs-target="#checkOutModal">
+                    <small class="text-muted d-block">
+                        <i class="bi bi-calendar-event me-1"></i> Check-out date
+                    </small>
+                    <input type="text" id="checkOutInput" class="form-control text-center border-0 fw-bold"
+                        placeholder="Select date" readonly />
+                </div>
+
+            </div>
+
+
+            <!-- Check-In Date Modal -->
+            <div class="modal fade" id="checkInModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen m-0">
+                    <div class="modal-content rounded-0" style="animation: slideDown 0.4s ease-out;">
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title">Select Check-in Date</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body d-flex justify-content-center align-items-center">
+                            <input id="checkInPicker" class="form-control form-control-lg text-center w-75" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Check-Out Date Modal -->
+            <div class="modal fade" id="checkOutModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen m-0">
+                    <div class="modal-content rounded-0" style="animation: slideDown 0.4s ease-out;">
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title">Select Check-out Date</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body d-flex justify-content-center align-items-center">
+                            <input id="checkOutPicker" class="form-control form-control-lg text-center w-75" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trigger Input -->
+            <div class="mb-3 d-flex align-items-center my-border p-2 rounded   ">
+                <i class="bi bi-people me-2"></i>
+                <input type="text" id="guestSummaryInput" class="form-control border-0 p-0" placeholder="Add guests"
+                    data-bs-toggle="modal" data-bs-target="#guestsModal" readonly />
+            </div>
+
+
+            <!-- Guests Modal -->
+            <div class="modal fade" id="guestsModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen m-0">
+                    <div class="modal-content rounded-0" style="animation: slideDown 0.4s ease-out;">
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title">Rooms & Guests</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+
+                            <!-- Counter Component -->
+                            <div class="mb-3 d-flex justify-content-between">
+                                <label class="form-label fw-bold">Rooms</label>
+                                <div class="input-group w-50">
+                                    <button class="btn btn-outline-secondary" type="button"
+                                        onclick="updateCount('rooms', -1)">−</button>
+                                    <input type="text" id="rooms" class="form-control text-center" value="1" readonly />
+                                    <button class="btn btn-outline-secondary" type="button"
+                                        onclick="updateCount('rooms', 1)">+</button>
+                                </div>
+                            </div>
+
+                            <div class="mb-3 d-flex justify-content-between">
+                                <label class="form-label fw-bold">Adults</label>
+                                <div class="input-group w-50">
+                                    <button class="btn btn-outline-secondary" type="button"
+                                        onclick="updateCount('adults', -1)">−</button>
+                                    <input type="text" id="adults" class="form-control text-center" value="1"
+                                        readonly />
+                                    <button class="btn btn-outline-secondary" type="button"
+                                        onclick="updateCount('adults', 1)">+</button>
+                                </div>
+                            </div>
+
+                            <div class="mb-3 d-flex justify-content-between">
+                                <label class="form-label fw-bold">Children (0-17 Years old)</label>
+                                <div class="input-group w-50">
+                                    <button class="btn btn-outline-secondary" type="button"
+                                        onclick="updateCount('children', -1)">−</button>
+                                    <input type="text" id="children" class="form-control text-center" value="0"
+                                        readonly />
+                                    <button class="btn btn-outline-secondary" type="button"
+                                        onclick="updateCount('children', 1)">+</button>
+                                </div>
+                            </div>
+
+                            <!-- Child Ages -->
+                            <div id="childAgesContainer" class="mb-4"></div>
+
+                            <!-- Done Button -->
+                            <button class="btn my-button w-100" onclick="applyGuestSummary()"
+                                data-bs-dismiss="modal">DONE</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Country -->
+            <div class="mb-3 d-flex align-items-center my-border p-2 rounded" data-bs-toggle="modal"
+                data-bs-target="#countryModal">
+                <i class="bi bi-globe-asia-australia me-2"></i>
+                <input type="text" class="form-control border-0 p-0" placeholder="Country" readonly />
+            </div>
+
+            <!-- Country Modal -->
+            <div class="modal fade" id="countryModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen m-0">
+                    <div class="modal-content rounded-0" style="animation: slideDown 0.4s ease-out;">
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title">Enter Country</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text bg-white border-0"><i class="bi bi-search"></i></span>
+                                <input type="text" class="form-control border-0"
+                                    placeholder="e.g. country, city, landmark">
+                            </div>
+
+                            <div class="mb-3">
+                                <div class="d-flex align-items-center mb-2 text-primary">
+                                    <i class="bi bi-geo-alt me-2"></i> Around current location
+                                </div>
+
+                                <p class="text-muted mb-1 fw-bold">Popular nearby countries</p>
+
+                                <ul class="list-unstyled">
+                                    <li class="d-flex align-items-start mb-3"><i class="bi bi-geo-alt me-2 mt-1"></i>
+                                        <div><strong>India</strong><br><small>South Asia</small></div>
+                                    </li>
+                                    <li class="d-flex align-items-start mb-3"><i class="bi bi-geo-alt me-2 mt-1"></i>
+                                        <div><strong>Pakistan</strong><br><small>South Asia</small></div>
+                                    </li>
+                                    <li class="d-flex align-items-start mb-3"><i class="bi bi-geo-alt me-2 mt-1"></i>
+                                        <div><strong>Bangladesh</strong><br><small>South Asia</small></div>
+                                    </li>
+                                    <li class="d-flex align-items-start mb-3"><i class="bi bi-geo-alt me-2 mt-1"></i>
+                                        <div><strong>Nepal</strong><br><small>South Asia</small></div>
+                                    </li>
+                                    <li class="d-flex align-items-start mb-3"><i class="bi bi-geo-alt me-2 mt-1"></i>
+                                        <div><strong>Sri Lanka</strong><br><small>South Asia</small></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Search Button -->
+            <div class="d-grid">
+                <button class="btn my-button fw-bold">Search</button>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <section class="Destinations row ">
+        <div class="heading text-center">
+            <h1>Choose Your Destination</h1>
+            <p>Take a look at the best places in the World</p>
+        </div>
+        <div class="swiper Destination-images">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="images/Goa.png" alt="" class="card rounded ">
+                    <h2>Goa</h2>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/Hp.png" alt="" class="card rounded ">
+                    <h2>Himachal <br>Pradesh</h2>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/kerla.png" alt="" class="card rounded ">
+                    <h2>Kerala</h2>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/Rajasthan.png" alt="" class="card rounded ">
+                    <h2>Rajasthan</h2>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/Uttarakhand.png" alt="" class="card rounded ">
+                    <h2>Uttarakhand</h2>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <div class="container my-5">
+        <img src="images/hosting.png" alt="" style="max-width: 380px;">
+    </div>
+
+
+    <div class="property-section mb-2">
+        <div class="property-header">
+            <div class="">
+                <h2 class="property-title fs-6">The very best of our Selections</h2>
+                <p class="property-subtitle ">Take a look at the best homes</p>
+            </div>
+            <a href="#" class="property-link">See all</a>
+        </div>
+
+        <div class="property-listings row">
+            <div class="property-card">
+                <div class="property-image" style="background-image: url('images/img1.png');"></div>
+                <div class="property-info">
+                    <p class="property-name fs-6">Beloshi’s Cliffhanger</p>
+                    <p class="property-details">10 Bedrooms &nbsp; 10 Bathrooms</p>
+                    <div class="property-footer">
+                        <span class="property-posted">Posted by Dr.Drake</span>
+                        <a href="#" class="property-price fs-6">$45,545</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="property-card">
+                <div class="property-image" style="background-image: url('images/img2.png');"></div>
+                <div class="property-info">
+                    <p class="property-name fs-6">Sky Penthouse | Luxurious 3bhk</p>
+                    <p class="property-details">10 Bedroom &nbsp; 150 M &nbsp; 2 Garage</p>
+                    <div class="property-footer">
+                        <span class="property-posted">Posted by Dr.Drake</span>
+                        <a href="#" class="property-price fs-6">$45,545</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="property-card">
+                <div class="property-image" style="background-image: url('images/img3.png');"></div>
+                <div class="property-info">
+                    <p class="property-name fs-6">Mystic Abode | An old colonial house</p>
+                    <p class="property-details">10 Bedroom &nbsp; 150 M &nbsp; 2 Garage</p>
+                    <div class="property-footer">
+                        <span class="property-posted">Posted by Dr.Drake</span>
+                        <a href="#" class="property-price fs-6">$45,545</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="property-card">
+                <div class="property-image" style="background-image: url('images/img4.png');"></div>
+                <div class="property-info">
+                    <p class="property-name fs-6">Waking Dream Cottage Bhimtal Lake View</p>
+                    <p class="property-details">10 Bedroom &nbsp; 150 M &nbsp; 2 Garage</p>
+                    <div class="property-footer">
+                        <span class="property-posted">Posted by Dr.Drake</span>
+                        <a href="#" class="property-price fs-6">$45,545</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="conainer testimonial-slider mt-0">
+        <h2 class="testimonial-title fs-4 mt-0">What Our Clients Say About Us</h2>
+        <div class="swiper testimonial-images">
+            <div class="swiper-wrapper ">
+                <div class="swiper-slide">
+                    <div class="testimonial-item">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Jane Doe"
+                            class="testimonial-image">
+                        <h3 class="testimonial-name">Jane Doe</h3>
+                        <p class="testimonial-role">App Developer</p>
+                        <p class="testimonial-quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonial-item">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Jane Doe"
+                            class="testimonial-image">
+                        <h3 class="testimonial-name">Jane Doe</h3>
+                        <p class="testimonial-role">App Developer</p>
+                        <p class="testimonial-quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonial-item">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Jane Doe"
+                            class="testimonial-image">
+                        <h3 class="testimonial-name">Jane Doe</h3>
+                        <p class="testimonial-role">App Developer</p>
+                        <p class="testimonial-quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonial-item">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Jane Doe"
+                            class="testimonial-image">
+                        <h3 class="testimonial-name">Jane Doe</h3>
+                        <p class="testimonial-role">App Developer</p>
+                        <p class="testimonial-quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonial-item">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Jane Doe"
+                            class="testimonial-image">
+                        <h3 class="testimonial-name">Jane Doe</h3>
+                        <p class="testimonial-role">App Developer</p>
+                        <p class="testimonial-quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- <---------home end------------------- -->
+
+
+
+
+
+    <footer class="app-footer">
+        <div class="container py-4">
+            <div class="footer-logo  mb-4">
+                <img src="images/logo.png" alt="FlyEasyGo" style="height: 50px;">
+                <p class="mt-2 small">FlyEasyGo is more than just a Hotel booking app; it's your one-stop shop for
+                    seamless travel experiences.</p>
+            </div>
+
+            <!-- Accordion Sections -->
+            <div class="accordion" id="footerAccordion">
+                <!-- Section 1 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="aboutHeading">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#aboutCollapse">
+                            About Us
+                        </button>
+                    </h2>
+                    <div id="aboutCollapse" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-unstyled mb-0">
+                                <li><a href="#">Promo</a></li>
+                                <li><a href="#">Help</a></li>
+                                <li><a href="#">Order</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">FAQ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="resourcesHeading">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#resourcesCollapse ">
+                            Resources
+                        </button>
+                    </h2>
+                    <div id="resourcesCollapse" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-unstyled mb-0">
+                                <li><a href="#">Documentation</a></li>
+                                <li><a href="#">Carrier</a></li>
+                                <li><a href="#">Work With Us</a></li>
+                                <li><a href="#">Blog & News</a></li>
+                                <li><a href="#">Affiliate</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 3 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="legalHeading">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#legalCollapse">
+                            Legal
+                        </button>
+                    </h2>
+                    <div id="legalCollapse" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-unstyled mb-0">
+                                <li><a href="#">Terms and Conditions</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Cookies Policy</a></li>
+                                <li><a href="#">Developers</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 4 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="contactHeading">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#contactCollapse">
+                            Contact Us
+                        </button>
+                    </h2>
+                    <div id="contactCollapse" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-unstyled mb-3">
+                                <li>FlyEasyGo@gmail.com</li>
+                                <li>+91 9455 6778 09</li>
+                                <li>India</li>
+                            </ul>
+                            <div>
+                                <h6>Follow Us On Social</h6>
+                                <div class="d-flex flex-wrap gap-3">
+                                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
+                                            width="24" alt="Facebook"></a>
+                                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png"
+                                            width="24" alt="Twitter"></a>
+                                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+                                            width="24" alt="LinkedIn"></a>
+                                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733590.png"
+                                            width="24" alt="YouTube"></a>
+                                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
+                                            width="24" alt="Instagram"></a>
+                                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046123.png"
+                                            width="24" alt="TikTok"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Text -->
+            <div class="text-center mt-4 small text-muted">
+                © 2024 FlyEasyGo. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Flatpickr -->
+    <link href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+
+
+    <script>
+        const testiSlider = new Swiper('.testimonial-images', {
+            slidesPerView: 1, // Show one slide at a time initially
+            spaceBetween: 20, // Space between slides
+            loop: true, // Infinite loop
+            autoplay: {
+                delay: 3000, // Auto-slide every 3 seconds
+                disableOnInteraction: false, // Continue autoplay after user interaction
+            },
+            navigation: {
+                nextEl: '.swiper-button-next', // Right arrow navigation
+                prevEl: '.swiper-button-prev', // Left arrow navigation
+            },
+            pagination: {
+                el: '.swiper-pagination', // Pagination dots
+                clickable: true, // Allow clicking on dots to navigate
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1, // Show 2 slides on small screens
+                },
+                768: {
+                    slidesPerView: 2, // Show 3 slides on medium screens
+                },
+                1024: {
+                    slidesPerView: 4, // Show 4 slides on larger screens
+                },
+            },
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Check-in Picker
+            flatpickr("#checkInPicker", {
+                dateFormat: "Y-m-d",
+                defaultDate: "2025-04-14",
+                onChange: function (selectedDates, dateStr) {
+                    document.getElementById("checkInInput").value = dateStr;
+                    bootstrap.Modal.getInstance(document.getElementById("checkInModal")).hide();
+                }
+            });
+
+            // Check-out Picker
+            flatpickr("#checkOutPicker", {
+                dateFormat: "Y-m-d",
+                defaultDate: "2025-04-15",
+                onChange: function (selectedDates, dateStr) {
+                    document.getElementById("checkOutInput").value = dateStr;
+                    bootstrap.Modal.getInstance(document.getElementById("checkOutModal")).hide();
+                }
+            });
+        });
+    </script>
+
+
+
+    <script>
+        function applyGuestSummary() {
+            const rooms = document.getElementById("rooms").value;
+            const adults = document.getElementById("adults").value;
+            const children = document.getElementById("children").value;
+            const childAges = [];
+
+            const selects = document.querySelectorAll("#childAgesContainer select");
+            selects.forEach(select => {
+                childAges.push(select.value + " yrs");
+            });
+
+            let summary = `${rooms} Room${rooms > 1 ? 's' : ''}, ${adults} Adult${adults > 1 ? 's' : ''}`;
+
+            if (children > 0) {
+                summary += `, ${children} Child${children > 1 ? 'ren' : ''} (${childAges.join(", ")})`;
+            }
+
+            document.getElementById("guestSummaryInput").value = summary;
+        }
+
+        function updateCount(type, change) {
+            const input = document.getElementById(type);
+            let value = parseInt(input.value) + change;
+
+            if (type === 'rooms' && (value < 1 || value > 5)) return;
+            if (type === 'adults' && (value < 1 || value > 10)) return;
+            if (type === 'children' && (value < 0 || value > 5)) return;
+
+            input.value = value;
+
+            if (type === 'children') updateChildAges(value);
+        }
+
+        function updateChildAges(count) {
+            const container = document.getElementById("childAgesContainer");
+            container.innerHTML = "";
+
+            for (let i = 1; i <= count; i++) {
+                const label = document.createElement("label");
+                label.className = "form-label fw-bold mt-3";
+                label.innerText = `Child ${i} Age`;
+
+                const select = document.createElement("select");
+                select.className = "form-select mb-2";
+
+                for (let age = 0; age <= 17; age++) {
+                    const option = document.createElement("option");
+                    option.value = age;
+                    option.innerText = `${age} yrs`;
+                    if (age === 3) option.selected = true; // default age
+                    select.appendChild(option);
+                }
+
+                container.appendChild(label);
+                container.appendChild(select);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const defaultChildren = parseInt(document.getElementById("children").value);
+            updateChildAges(defaultChildren);
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="sldier.js"></script>
+
+</body>
+
+</html>
